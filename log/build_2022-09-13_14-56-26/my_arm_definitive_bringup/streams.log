@@ -1,0 +1,45 @@
+[0.018s] Invoking command in '/home/caio/my_arm_def/build/my_arm_definitive_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/caio/my_arm_def/src/my_arm_definitive_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/caio/my_arm_def/install/my_arm_definitive_bringup
+[0.114s] -- The C compiler identification is GNU 8.4.0
+[0.196s] -- The CXX compiler identification is GNU 8.4.0
+[0.204s] -- Check for working C compiler: /usr/bin/cc
+[0.315s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.317s] -- Detecting C compiler ABI info
+[0.430s] -- Detecting C compiler ABI info - done
+[0.446s] -- Detecting C compile features
+[0.446s] -- Detecting C compile features - done
+[0.449s] -- Check for working CXX compiler: /usr/bin/c++
+[0.552s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.554s] -- Detecting CXX compiler ABI info
+[0.677s] -- Detecting CXX compiler ABI info - done
+[0.699s] -- Detecting CXX compile features
+[0.699s] -- Detecting CXX compile features - done
+[0.704s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.757s] -- Found PythonInterp: /home/caio/anaconda3/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+[0.757s] -- Using PYTHON_EXECUTABLE: /home/caio/anaconda3/bin/python3
+[1.058s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.217s] -- Configuring done
+[1.219s] -- Generating done
+[1.220s] -- Build files have been written to: /home/caio/my_arm_def/build/my_arm_definitive_bringup
+[1.224s] Invoked command in '/home/caio/my_arm_def/build/my_arm_definitive_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/caio/my_arm_def/src/my_arm_definitive_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/caio/my_arm_def/install/my_arm_definitive_bringup
+[1.228s] Invoking command in '/home/caio/my_arm_def/build/my_arm_definitive_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/caio/my_arm_def/build/my_arm_definitive_bringup -- -j8 -l8
+[1.286s] Invoked command in '/home/caio/my_arm_def/build/my_arm_definitive_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/caio/my_arm_def/build/my_arm_definitive_bringup -- -j8 -l8
+[1.356s] Invoking command in '/home/caio/my_arm_def/build/my_arm_definitive_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/caio/my_arm_def/build/my_arm_definitive_bringup
+[1.366s] -- Install configuration: ""
+[1.366s] -- Execute custom install script
+[1.367s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/launch/number_app.launch.py
+[1.385s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/ament_index/resource_index/package_run_dependencies/my_arm_definitive_bringup
+[1.403s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/ament_index/resource_index/parent_prefix_path/my_arm_definitive_bringup
+[1.421s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/environment/ament_prefix_path.sh
+[1.431s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/environment/ament_prefix_path.dsv
+[1.443s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/environment/path.sh
+[1.454s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/environment/path.dsv
+[1.469s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/local_setup.bash
+[1.487s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/local_setup.sh
+[1.499s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/local_setup.zsh
+[1.510s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/local_setup.dsv
+[1.528s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/package.dsv
+[1.539s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/ament_index/resource_index/packages/my_arm_definitive_bringup
+[1.552s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/cmake/my_arm_definitive_bringupConfig.cmake
+[1.563s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/cmake/my_arm_definitive_bringupConfig-version.cmake
+[1.578s] -- Symlinking: /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/package.xml
+[1.594s] Invoked command in '/home/caio/my_arm_def/build/my_arm_definitive_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/caio/my_arm_def/build/my_arm_definitive_bringup

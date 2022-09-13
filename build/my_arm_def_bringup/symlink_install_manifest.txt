@@ -1,0 +1,16 @@
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup//launch/my_arm_definitive.lauch.py
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/ament_index/resource_index/package_run_dependencies/my_arm_def_bringup
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/ament_index/resource_index/parent_prefix_path/my_arm_def_bringup
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/environment/ament_prefix_path.sh
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/environment/ament_prefix_path.dsv
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/environment/path.sh
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/environment/path.dsv
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/local_setup.bash
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/local_setup.sh
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/local_setup.zsh
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/local_setup.dsv
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/package.dsv
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/ament_index/resource_index/packages/my_arm_def_bringup
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/cmake/my_arm_def_bringupConfig.cmake
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/cmake/my_arm_def_bringupConfig-version.cmake
+/home/caio/my_arm_def/install/my_arm_def_bringup/share/my_arm_def_bringup/package.xml
