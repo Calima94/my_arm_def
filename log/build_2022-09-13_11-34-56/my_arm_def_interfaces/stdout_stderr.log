@@ -1,0 +1,67 @@
+-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /home/caio/anaconda3/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /home/caio/anaconda3/bin/python3
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /home/caio/anaconda3/bin/python3 (found version "3.8.5") 
+-- Found ament_cmake_ros: 0.9.1 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /home/caio/anaconda3/bin/python3 (found suitable version "3.8.5", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+-- Found PythonLibs: /home/caio/anaconda3/lib/libpython3.8.so (found suitable version "3.8.5", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /home/caio/anaconda3/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /home/caio/anaconda3/include/python3.8
+-- Using PYTHON_LIBRARIES: /home/caio/anaconda3/lib/libpython3.8.so
+-- Found PythonExtra: .so  
+-- Configuring done
+CMake Warning at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:235 (add_library):
+  Cannot generate a safe runtime search path for target
+  my_arm_def_interfaces__rosidl_typesupport_fastrtps_c__pyext because files
+  in some directories may conflict with libraries in implicit directories:
+
+    runtime library [libssl.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/caio/anaconda3/lib
+    runtime library [libcrypto.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/caio/anaconda3/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:17 (rosidl_generate_interfaces)
+
+
+-- Generating done
+-- Build files have been written to: /home/caio/my_arm_def/build/my_arm_def_interfaces
+[35m[1mScanning dependencies of target my_arm_def_interfaces__cpp[0m
+[  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+Traceback (most recent call last):
+  File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 8, in <module>
+    from rosidl_generator_c import generate_c
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_c/__init__.py", line 15, in <module>
+    from rosidl_cmake import convert_camel_case_to_lower_case_underscore
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 24, in <module>
+    from rosidl_parser.parser import parse_idl_file
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 20, in <module>
+Traceback (most recent call last):
+  File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 8, in <module>
+    from lark import Lark
+ModuleNotFoundError: No module named 'lark'
+    from rosidl_generator_cpp import generate_cpp
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_cpp/__init__.py", line 17, in <module>
+    from rosidl_cmake import generate_files
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 24, in <module>
+    from rosidl_parser.parser import parse_idl_file
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 20, in <module>
+    from lark import Lark
+ModuleNotFoundError: No module named 'lark'
+make[2]: *** [CMakeFiles/my_arm_def_interfaces__rosidl_generator_c.dir/build.make:75: rosidl_generator_c/my_arm_def_interfaces/msg/hardware_status.h] Erro 1
+make[1]: *** [CMakeFiles/Makefile2:333: CMakeFiles/my_arm_def_interfaces__rosidl_generator_c.dir/all] Erro 2
+make[1]: ** Esperando que outros processos terminem.
+make[2]: *** [CMakeFiles/my_arm_def_interfaces__cpp.dir/build.make:79: rosidl_generator_cpp/my_arm_def_interfaces/msg/hardware_status.hpp] Erro 1
+make[1]: *** [CMakeFiles/Makefile2:442: CMakeFiles/my_arm_def_interfaces__cpp.dir/all] Erro 2
+make: *** [Makefile:141: all] Erro 2

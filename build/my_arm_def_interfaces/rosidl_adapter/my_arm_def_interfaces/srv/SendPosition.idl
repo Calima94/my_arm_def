@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from my_arm_def_interfaces/srv/SendPosition.srv
+// generated code does not contain a copyright notice
+
+
+module my_arm_def_interfaces {
+  module srv {
+    struct SendPosition_Request {
+      double position;
+    };
+    struct SendPosition_Response {
+      boolean success;
+
+      string msg;
+    };
+  };
+};

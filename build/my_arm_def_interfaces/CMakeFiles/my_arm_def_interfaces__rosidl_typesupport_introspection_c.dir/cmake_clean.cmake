@@ -1,0 +1,12 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/my_arm_def_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_arm_def_interfaces/srv/detail/send_position__type_support.c.o"
+  "libmy_arm_def_interfaces__rosidl_typesupport_introspection_c.pdb"
+  "libmy_arm_def_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/my_arm_def_interfaces/srv/detail/send_position__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/my_arm_def_interfaces/srv/detail/send_position__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/my_arm_def_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

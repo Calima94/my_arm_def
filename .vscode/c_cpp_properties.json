@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/caio/ros2_ws/install/my_try_robot/include/**",
+        "/home/caio/ros2_ws/install/my_robot_interfaces/include/**",
+        "/home/caio/ros2_ws/install/my_arm/include/**",
+        "/home/caio/bridge_ws/install/ros_ign_bridge/include/**",
+        "/home/caio/turtlebot3_ws/install/turtlebot3_gazebo/include/**",
+        "/home/caio/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
+        "/home/caio/turtlebot3_ws/install/turtlebot3_msgs/include/**",
+        "/home/caio/turtlebot3_ws/install/dynamixel_sdk/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/caio/my_arm_def/src/my_arm_def_cpp_pkg/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

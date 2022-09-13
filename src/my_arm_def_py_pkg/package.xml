@@ -8,6 +8,12 @@
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
+  <depend>example_interfaces</depend>
+  <depend>gazebo_msgs</depend>
+  <depend>serial</depend>
+  <depend>pygame</depend>
+  <depend>my_arm</depend>
+  <depend>my_robot_interfaces</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
