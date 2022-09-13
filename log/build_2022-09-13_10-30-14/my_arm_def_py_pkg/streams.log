@@ -1,0 +1,33 @@
+[0.335s] Invoking command in '/home/caio/my_arm_def/src/my_arm_def_py_pkg': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_arm_def_py_pkg build --build-base /home/caio/my_arm_def/build/my_arm_def_py_pkg/build install --prefix /home/caio/my_arm_def/install/my_arm_def_py_pkg --record /home/caio/my_arm_def/build/my_arm_def_py_pkg/install.log --single-version-externally-managed
+[0.626s] running egg_info
+[0.627s] creating ../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info
+[0.627s] writing ../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/PKG-INFO
+[0.628s] writing dependency_links to ../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/dependency_links.txt
+[0.628s] writing entry points to ../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/entry_points.txt
+[0.629s] writing requirements to ../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/requires.txt
+[0.629s] writing top-level names to ../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/top_level.txt
+[0.630s] writing manifest file '../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/SOURCES.txt'
+[0.674s] reading manifest file '../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/SOURCES.txt'
+[0.675s] writing manifest file '../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info/SOURCES.txt'
+[0.676s] running build
+[0.676s] running build_py
+[0.676s] creating /home/caio/my_arm_def/build/my_arm_def_py_pkg/build
+[0.677s] creating /home/caio/my_arm_def/build/my_arm_def_py_pkg/build/lib
+[0.677s] creating /home/caio/my_arm_def/build/my_arm_def_py_pkg/build/lib/my_arm_def_py_pkg
+[0.677s] copying my_arm_def_py_pkg/__init__.py -> /home/caio/my_arm_def/build/my_arm_def_py_pkg/build/lib/my_arm_def_py_pkg
+[0.677s] running install
+[0.677s] running install_lib
+[0.678s] creating /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages/my_arm_def_py_pkg
+[0.679s] copying /home/caio/my_arm_def/build/my_arm_def_py_pkg/build/lib/my_arm_def_py_pkg/__init__.py -> /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages/my_arm_def_py_pkg
+[0.680s] byte-compiling /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages/my_arm_def_py_pkg/__init__.py to __init__.cpython-38.pyc
+[0.684s] running install_data
+[0.685s] creating /home/caio/my_arm_def/install/my_arm_def_py_pkg/share/ament_index
+[0.685s] creating /home/caio/my_arm_def/install/my_arm_def_py_pkg/share/ament_index/resource_index
+[0.685s] creating /home/caio/my_arm_def/install/my_arm_def_py_pkg/share/ament_index/resource_index/packages
+[0.685s] copying resource/my_arm_def_py_pkg -> /home/caio/my_arm_def/install/my_arm_def_py_pkg/share/ament_index/resource_index/packages
+[0.685s] copying package.xml -> /home/caio/my_arm_def/install/my_arm_def_py_pkg/share/my_arm_def_py_pkg
+[0.685s] running install_egg_info
+[0.688s] Copying ../../build/my_arm_def_py_pkg/my_arm_def_py_pkg.egg-info to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages/my_arm_def_py_pkg-0.0.0-py3.8.egg-info
+[0.689s] running install_scripts
+[0.712s] writing list of installed files to '/home/caio/my_arm_def/build/my_arm_def_py_pkg/install.log'
+[0.748s] Invoked command in '/home/caio/my_arm_def/src/my_arm_def_py_pkg' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_arm_def_py_pkg build --build-base /home/caio/my_arm_def/build/my_arm_def_py_pkg/build install --prefix /home/caio/my_arm_def/install/my_arm_def_py_pkg --record /home/caio/my_arm_def/build/my_arm_def_py_pkg/install.log --single-version-externally-managed

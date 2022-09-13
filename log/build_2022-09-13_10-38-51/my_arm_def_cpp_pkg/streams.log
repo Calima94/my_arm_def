@@ -1,0 +1,37 @@
+[0.036s] Invoking command in '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/caio/my_arm_def/src/my_arm_def_cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/caio/my_arm_def/install/my_arm_def_cpp_pkg
+[0.055s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.099s] -- Using PYTHON_EXECUTABLE: /home/caio/anaconda3/bin/python3
+[0.438s] -- Found rclcpp: 2.3.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.476s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.480s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.636s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.689s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.693s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.851s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.369s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.374s] -- Added test 'lint_cmake' to check CMake code style
+[1.376s] -- Added test 'xmllint' to check XML markup files
+[1.393s] -- Configuring done
+[1.407s] -- Generating done
+[1.410s] -- Build files have been written to: /home/caio/my_arm_def/build/my_arm_def_cpp_pkg
+[1.421s] Invoked command in '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/caio/my_arm_def/src/my_arm_def_cpp_pkg -DCMAKE_INSTALL_PREFIX=/home/caio/my_arm_def/install/my_arm_def_cpp_pkg
+[1.427s] Invoking command in '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/caio/my_arm_def/build/my_arm_def_cpp_pkg -- -j8 -l8
+[1.504s] Invoked command in '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/caio/my_arm_def/build/my_arm_def_cpp_pkg -- -j8 -l8
+[1.559s] Invoking command in '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/caio/my_arm_def/build/my_arm_def_cpp_pkg
+[1.575s] -- Install configuration: ""
+[1.575s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/my_arm_def_cpp_pkg
+[1.575s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/my_arm_def_cpp_pkg
+[1.576s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/ament_prefix_path.sh
+[1.576s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/ament_prefix_path.dsv
+[1.576s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/path.sh
+[1.576s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/path.dsv
+[1.577s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.bash
+[1.577s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.sh
+[1.577s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.zsh
+[1.577s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.dsv
+[1.577s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.dsv
+[1.577s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/packages/my_arm_def_cpp_pkg
+[1.615s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig.cmake
+[1.695s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig-version.cmake
+[1.695s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.xml
+[1.703s] Invoked command in '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/caio/my_arm_def/build/my_arm_def_cpp_pkg
