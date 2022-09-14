@@ -1,0 +1,22 @@
+[0.680s] Invoking command in '/home/caio/my_arm_def/build/my_arm_def_py_pkg': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/caio/my_arm_def/install/my_arm_def_py_pkg --editable --build-directory /home/caio/my_arm_def/build/my_arm_def_py_pkg/build --no-deps install_data --install-dir /home/caio/my_arm_def/install/my_arm_def_py_pkg
+[1.409s] running develop
+[1.677s] running egg_info
+[1.677s] writing my_arm_def_py_pkg.egg-info/PKG-INFO
+[1.677s] writing dependency_links to my_arm_def_py_pkg.egg-info/dependency_links.txt
+[1.678s] writing entry points to my_arm_def_py_pkg.egg-info/entry_points.txt
+[1.678s] writing requirements to my_arm_def_py_pkg.egg-info/requires.txt
+[1.678s] writing top-level names to my_arm_def_py_pkg.egg-info/top_level.txt
+[2.008s] reading manifest file 'my_arm_def_py_pkg.egg-info/SOURCES.txt'
+[2.016s] writing manifest file 'my_arm_def_py_pkg.egg-info/SOURCES.txt'
+[2.189s] running build_ext
+[2.195s] Creating /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages/site.py
+[2.198s] Creating /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages/my-arm-def-py-pkg.egg-link (link to .)
+[2.199s] Installing arm_controller script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[2.199s] Installing capture_braco_pos script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[2.199s] Installing myo_raw script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[2.199s] Installing spawn_arm script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[2.199s] 
+[2.199s] Installed /home/caio/my_arm_def/build/my_arm_def_py_pkg
+[2.200s] running install_data
+[2.200s] copying package.xml -> /home/caio/my_arm_def/install/my_arm_def_py_pkg/share/my_arm_def_py_pkg
+[2.251s] Invoked command in '/home/caio/my_arm_def/build/my_arm_def_py_pkg' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/caio/my_arm_def/install/my_arm_def_py_pkg --editable --build-directory /home/caio/my_arm_def/build/my_arm_def_py_pkg/build --no-deps install_data --install-dir /home/caio/my_arm_def/install/my_arm_def_py_pkg

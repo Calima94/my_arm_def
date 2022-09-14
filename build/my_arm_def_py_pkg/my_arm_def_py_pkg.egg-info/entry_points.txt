@@ -1,3 +1,6 @@
 [console_scripts]
-
+arm_controller = my_arm_def_py_pkg.arm_controller:main
+capture_braco_pos = my_arm_def_py_pkg.capture_braco_pos:main
+myo_raw = my_arm_def_py_pkg.myo_raw:main
+spawn_arm = my_arm_def_py_pkg.spawn_arm:main
 

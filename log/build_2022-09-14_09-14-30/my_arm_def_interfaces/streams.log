@@ -1,0 +1,143 @@
+[0.061s] Invoking command in '/home/caio/my_arm_def/build/my_arm_def_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/caio/my_arm_def/build/my_arm_def_interfaces -- -j8 -l8
+[0.314s] [  3%] Built target my_arm_def_interfaces__cpp
+[0.335s] [ 12%] Built target my_arm_def_interfaces__rosidl_generator_c
+[0.411s] [ 22%] Built target my_arm_def_interfaces__rosidl_typesupport_c
+[0.421s] [ 32%] Built target my_arm_def_interfaces__rosidl_typesupport_introspection_cpp
+[0.446s] [ 41%] Built target my_arm_def_interfaces__rosidl_typesupport_introspection_c
+[0.451s] [ 51%] Built target my_arm_def_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.460s] [ 61%] Built target my_arm_def_interfaces__rosidl_typesupport_cpp
+[0.587s] [ 70%] Built target my_arm_def_interfaces__rosidl_typesupport_fastrtps_c
+[0.664s] [ 70%] Built target my_arm_def_interfaces
+[0.754s] [ 74%] Built target my_arm_def_interfaces__py
+[1.005s] [ 80%] Built target my_arm_def_interfaces__python
+[1.168s] [ 87%] Built target my_arm_def_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.198s] [ 93%] Built target my_arm_def_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.211s] [100%] Built target my_arm_def_interfaces__rosidl_typesupport_c__pyext
+[1.230s] Invoked command in '/home/caio/my_arm_def/build/my_arm_def_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/caio/my_arm_def/build/my_arm_def_interfaces -- -j8 -l8
+[1.351s] Invoking command in '/home/caio/my_arm_def/build/my_arm_def_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/caio/my_arm_def/build/my_arm_def_interfaces
+[1.365s] -- Install configuration: ""
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/ament_index/resource_index/rosidl_interfaces/my_arm_def_interfaces
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__struct.h
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__functions.c
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__type_support.h
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__functions.h
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/send_position.h
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.366s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail
+[1.367s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__struct.h
+[1.367s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__functions.h
+[1.367s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__type_support.h
+[1.367s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__functions.c
+[1.367s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/hardware_status.h
+[1.367s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/library_path.sh
+[1.367s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/library_path.dsv
+[1.373s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__rosidl_generator_c.so
+[1.373s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces
+[1.374s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv
+[1.374s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail
+[1.374s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__rosidl_typesupport_fastrtps_c.h
+[1.374s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg
+[1.374s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail
+[1.374s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__rosidl_typesupport_fastrtps_c.h
+[1.375s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.375s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.375s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces
+[1.376s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv
+[1.376s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail
+[1.376s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/dds_fastrtps
+[1.377s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__rosidl_typesupport_fastrtps_cpp.hpp
+[1.377s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg
+[1.377s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.377s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail
+[1.377s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__rosidl_typesupport_fastrtps_cpp.hpp
+[1.378s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/dds_fastrtps
+[1.407s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.408s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces
+[1.409s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv
+[1.409s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail
+[1.409s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__rosidl_typesupport_introspection_c.h
+[1.410s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__type_support.c
+[1.410s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg
+[1.410s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.411s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail
+[1.411s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__type_support.c
+[1.411s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__rosidl_typesupport_introspection_c.h
+[1.412s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__rosidl_typesupport_introspection_c.so
+[1.412s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__rosidl_typesupport_c.so
+[1.413s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces
+[1.413s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv
+[1.413s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/send_position.hpp
+[1.414s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail
+[1.414s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__builder.hpp
+[1.414s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__struct.hpp
+[1.415s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__traits.hpp
+[1.415s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg
+[1.415s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/hardware_status.hpp
+[1.415s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail
+[1.416s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__traits.hpp
+[1.416s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__builder.hpp
+[1.416s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__struct.hpp
+[1.416s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces
+[1.417s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv
+[1.417s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail
+[1.417s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__rosidl_typesupport_introspection_cpp.hpp
+[1.418s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/srv/detail/send_position__type_support.cpp
+[1.418s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg
+[1.418s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail
+[1.418s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__rosidl_typesupport_introspection_cpp.hpp
+[1.419s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/include/my_arm_def_interfaces/msg/detail/hardware_status__type_support.cpp
+[1.419s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.419s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__rosidl_typesupport_cpp.so
+[1.419s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/pythonpath.sh
+[1.419s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/pythonpath.dsv
+[1.419s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/__init__.py
+[1.530s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/srv
+[1.530s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/srv/__init__.py
+[1.530s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/srv/_send_position_s.c
+[1.531s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/srv/_send_position.py
+[1.542s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/my_arm_def_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[1.564s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/my_arm_def_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[1.575s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages/my_arm_def_interfaces/my_arm_def_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[1.577s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/lib/libmy_arm_def_interfaces__python.so
+[1.577s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/srv/SendPosition.idl
+[1.578s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/srv/SendPosition.srv
+[1.578s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/srv/SendPosition_Request.msg
+[1.579s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/srv/SendPosition_Response.msg
+[1.579s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/ament_index/resource_index/package_run_dependencies/my_arm_def_interfaces
+[1.580s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/ament_index/resource_index/parent_prefix_path/my_arm_def_interfaces
+[1.580s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/ament_prefix_path.sh
+[1.580s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/ament_prefix_path.dsv
+[1.581s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/path.sh
+[1.581s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/environment/path.dsv
+[1.581s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/local_setup.bash
+[1.581s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/local_setup.sh
+[1.582s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/local_setup.zsh
+[1.582s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/local_setup.dsv
+[1.582s] -- Installing: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/package.dsv
+[1.592s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/ament_index/resource_index/packages/my_arm_def_interfaces
+[1.631s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_generator_cExport.cmake
+[1.631s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.676s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.676s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.696s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_cExport.cmake
+[1.696s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.720s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_generator_cppExport.cmake
+[1.742s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.743s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.777s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_cppExport.cmake
+[1.777s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.778s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.778s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.778s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.778s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.779s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.779s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.779s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.779s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfacesConfig.cmake
+[1.779s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/cmake/my_arm_def_interfacesConfig-version.cmake
+[1.780s] -- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_interfaces/share/my_arm_def_interfaces/package.xml
+[1.793s] Invoked command in '/home/caio/my_arm_def/build/my_arm_def_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/caio/my_arm_def/build/my_arm_def_interfaces

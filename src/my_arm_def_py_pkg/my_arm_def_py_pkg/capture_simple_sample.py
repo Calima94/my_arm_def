@@ -1,4 +1,4 @@
-from my_arm_def_py import mod_sig_emg as mse
+from my_arm_def_py_pkg import mod_sig_emg as mse
 import numpy as np
 import pandas as pd
 

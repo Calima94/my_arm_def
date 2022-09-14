@@ -12,7 +12,7 @@ import math
 from functools import partial
 from rclpy.node import Node
 from example_interfaces.msg import Float64
-from my_robot_interfaces.srv import SendPosition
+from my_arm_def_interfaces.srv import SendPosition
 
 
 class MyoRawNode(Node):
