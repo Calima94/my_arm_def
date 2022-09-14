@@ -1,15 +1,22 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>my_arm_def_cpp_pkg</name>
+  <name>my_arm</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="caiolima2000@hotmail.com">caio</maintainer>
+  <maintainer email="caio@todo.todo">caio</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>rclcpp</depend>
+  <depend>gazebo_ros</depend>
+  <depend>gazebo</depend>
+  <depend>geometry_msgs</depend>
+  <depend>example_interfaces</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

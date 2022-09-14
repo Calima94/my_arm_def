@@ -40,7 +40,7 @@ def main():
     # Get path to the turtlebot3 burgerbot
     #sdf_file_path = "/home/caio/ros2_ws/src/my_arm/models/model.sdf"
     #sdf_file_path = "/home/caio/ros2_ws/src/my_arm/models/braco_e_antebraco_2.sdf"
-    sdf_file_path = "/home/caio/ros2_ws/src/my_arm/models/braco_antebraco_garra.sdf"
+    sdf_file_path = "/home/caio/my_arm_def/src/my_arm_def_cpp_pkg/models/braco_antebraco_garra.sdf"
     # Set data for request
     request = SpawnEntity.Request()
     #request.name = argv[0]
