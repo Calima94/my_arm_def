@@ -77,13 +77,13 @@ def m_rms_values_(class_mod_, time_between_captures_of_samples, window_time, n_o
     return rms_table_
 
 def matrix_m(type_matrix,class_mod_, time_between_captures_of_samples, window_time, n_of_chanels):
-    from sklearn.preprocessing import StandardScaler
-    scaler = StandardScaler()
+    #from sklearn.preprocessing import StandardScaler
+    #scaler = StandardScaler()
     if type_matrix == "rms":
         m_matrix_ = m_rms_values_(class_mod_, time_between_captures_of_samples, window_time, n_of_chanels)
     elif type_matrix == "mav":
         m_matrix_ = m_mav_values_(class_mod_, time_between_captures_of_samples, window_time, n_of_chanels)
-    m_matrix_[:,0:-1] = scaler.fit_transform(m_matrix_[:,0:-1])
+    #m_matrix_[:,0:-1] = scaler.fit_transform(m_matrix_[:,0:-1])
     return m_matrix_
 
 
