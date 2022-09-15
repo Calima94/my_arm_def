@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(my_arm)
+project(my_arm_def_cpp_pkg)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -34,10 +34,10 @@ include_directories(include
 link_directories(${gazebo_dev_LIBRARY_DIRS})
 
 # gazebo_ros_joint_state_publisher
-add_library(arm_controll SHARED
-  src/arm_controll.cpp
+add_library(arm_control SHARED
+  src/arm_control.cpp
 )
-ament_target_dependencies(arm_controll
+ament_target_dependencies(arm_control
   "gazebo_dev"
   "gazebo_ros"
   "rclcpp"
@@ -45,7 +45,7 @@ ament_target_dependencies(arm_controll
   "example_interfaces"
 )
 
-ament_export_libraries(arm_controll)
+ament_export_libraries(arm_control)
 
 
 install(DIRECTORY include/
@@ -53,7 +53,7 @@ install(DIRECTORY include/
 
 
 install(TARGETS
-  arm_controll
+  arm_control
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin

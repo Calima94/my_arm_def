@@ -1108,7 +1108,7 @@
 
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
-    <plugin name="joint_controll" filename="libarm_controll.so">
+    <plugin name="joint_control" filename="libarm_control.so">
 
     <ros>
 

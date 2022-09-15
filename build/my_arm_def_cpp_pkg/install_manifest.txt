@@ -1,3 +1,7 @@
+/home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/library_path.sh
+/home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/library_path.dsv
+/home/caio/my_arm_def/install/my_arm_def_cpp_pkg/lib/libarm_control.so
+/home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg//worlds/braco_com_mesa.world
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/my_arm_def_cpp_pkg
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/my_arm_def_cpp_pkg
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/ament_prefix_path.sh
@@ -10,6 +14,7 @@
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.dsv
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.dsv
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/packages/my_arm_def_cpp_pkg
+/home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/ament_cmake_export_libraries-extras.cmake
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig.cmake
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig-version.cmake
 /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.xml

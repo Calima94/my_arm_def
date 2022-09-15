@@ -1,0 +1,464 @@
+[0.000000] (-) TimerEvent: {}
+[0.001610] (-) JobUnselected: {'identifier': 'my_arm_def_bringup'}
+[0.002336] (-) JobUnselected: {'identifier': 'my_arm_def_interfaces'}
+[0.002427] (-) JobUnselected: {'identifier': 'my_arm_def_py_pkg'}
+[0.002501] (-) JobUnselected: {'identifier': 'my_arm_definitive_bringup'}
+[0.002561] (my_arm_def_cpp_pkg) JobQueued: {'identifier': 'my_arm_def_cpp_pkg', 'dependencies': OrderedDict()}
+[0.002735] (my_arm_def_cpp_pkg) JobStarted: {'identifier': 'my_arm_def_cpp_pkg'}
+[0.049918] (my_arm_def_cpp_pkg) JobProgress: {'identifier': 'my_arm_def_cpp_pkg', 'progress': 'cmake'}
+[0.087359] (my_arm_def_cpp_pkg) JobProgress: {'identifier': 'my_arm_def_cpp_pkg', 'progress': 'build'}
+[0.089212] (my_arm_def_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg', '--', '-j8', '-l8'], 'cwd': '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'pt_BR:pt:en'), ('USER', 'caio'), ('SSH_AGENT_PID', '2547'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/caio/my_arm_def/install/my_arm_def_interfaces/lib:/home/caio/ros2_ws/install/my_try_robot/lib:/home/caio/ros2_ws/install/my_robot_interfaces/lib:/home/caio/ros2_ws/install/my_arm/lib:/home/caio/ros2_ws/install/gazebo_ros_action_tutorial/lib:/home/caio/bridge_ws/install/ros_ign_bridge/lib:/home/caio/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/caio/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/caio/velodyne_plugin/build'), ('HOME', '/home/caio'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/caio'), ('DESKTOP_SESSION', 'ubuntu-wayland'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('MANAGERPID', '2322'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-wayland.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/caio/bridge_ws/install:/home/caio/ros2_ws/install:/home/caio/ROS2_arm_py/install:/home/caio/turtlebot3_ws/install:/home/caio/my_arm_def/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'caio'), ('JOURNAL_STREAM', '8:54757'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-wayland.default.path'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/caio/ros2_ws/src/my_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/caio/anaconda3/bin:/home/caio/anaconda3/condabin:/opt/ros/foxy/bin:/home/caio/.local/bin:/home/caio/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/caio-Nitro-AN515-43:@/tmp/.ICE-unix/2613,unix/caio-Nitro-AN515-43:/tmp/.ICE-unix/2613'), ('GDM_LANG', 'pt_BR'), ('INVOCATION_ID', '533e3eee811743ec813e4a1fd9e24940'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c27596b5_2c59_485d_8428_77d40e7e9c57'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-wayland'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.TTITS1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.218'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/caio'), ('AMENT_PREFIX_PATH', '/home/caio/my_arm_def/install/my_arm_definitive_bringup:/home/caio/my_arm_def/install/my_arm_def_bringup:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/my_arm_def/install/my_arm_def_interfaces:/home/caio/my_arm_def/install/my_arm_def_cpp_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/my_robot_bringup:/home/caio/ros2_ws/install/turtlesim_project_cpp:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_try_robot:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_cpp_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_robot_interfaces:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/my_arm:/home/caio/ros2_ws/install/lydar:/home/caio/ros2_ws/install/gazebo_ros_action_tutorial:/home/caio/ros2_ws/install/bocbot:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/bridge_ws/install/ros_ign:/home/caio/bridge_ws/install/ros_ign_gazebo_demos:/home/caio/bridge_ws/install/ros_ign_image:/home/caio/bridge_ws/install/ros_ign_gazebo:/home/caio/bridge_ws/install/ros_ign_bridge:/home/caio/turtlebot3_ws/install/turtlebot3_simulations:/home/caio/turtlebot3_ws/install/turtlebot3_gazebo:/home/caio/turtlebot3_ws/install/turtlebot3:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_bringup:/home/caio/turtlebot3_ws/install/turtlebot3_node:/home/caio/turtlebot3_ws/install/turtlebot3_navigation2:/home/caio/turtlebot3_ws/install/turtlebot3_fake_node:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/turtlebot3_msgs:/home/caio/turtlebot3_ws/install/turtlebot3_description:/home/caio/turtlebot3_ws/install/turtlebot3_cartographer:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/home/caio/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/caio/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/caio/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-wayland'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo_models:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg'), ('QT_QPA_PLATFORM', 'xcb'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg'), ('CONDA_EXE', '/home/caio/anaconda3/bin/conda'), ('GAZEBO_PLUGIN_PATH', '/home/caio/ros2_ws/install/gazebo_ros_action_tutorial/lib/:/home/caio/ros2_ws/install/my_try_robot/lib:/home/caio/ros2_ws/install/my_arm/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-wayland:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/caio/my_arm_def/build/my_arm_def_py_pkg:/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:/home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg/lib/python3.8/site-packages:/home/caio/ROS2_arm_py/install/my-test-package/lib/python3.8/site-packages:/home/caio/ros2_ws/install/turtlesim_catch_them_all/lib/python3.8/site-packages:/home/caio/ros2_ws/install/my_py_pkg/lib/python3.8/site-packages:/home/caio/ros2_ws/build/my_arm_py:/home/caio/ros2_ws/install/my_arm_py/lib/python3.8/site-packages:/home/caio/ros2_ws/install/my_robot_interfaces/lib/python3.8/site-packages:/home/caio/ros2_ws/install/my_package/lib/python3.8/site-packages:/home/caio/ros2_ws/install/big_bazu/lib/python3.8/site-packages:/home/caio/ros2_ws/install/bigBazu/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/build/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/build/turtlebot3_example:/home/caio/turtlebot3_ws/install/turtlebot3_example/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/build/robot_spawner_pkg:/home/caio/turtlebot3_ws/install/robot_spawner_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/caio/anaconda3'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/caio/my_arm_def/install/my_arm_definitive_bringup:/home/caio/my_arm_def/install/my_arm_def_bringup:/home/caio/my_arm_def/install/my_arm_def_interfaces:/home/caio/my_arm_def/install/my_arm_def_cpp_pkg:/home/caio/ros2_ws/install/my_robot_bringup:/home/caio/ros2_ws/install/turtlesim_project_cpp:/home/caio/ros2_ws/install/my_try_robot:/home/caio/ros2_ws/install/my_cpp_pkg:/home/caio/ros2_ws/install/my_robot_interfaces:/home/caio/ros2_ws/install/my_arm:/home/caio/ros2_ws/install/lydar:/home/caio/ros2_ws/install/gazebo_ros_action_tutorial:/home/caio/ros2_ws/install/bocbot:/home/caio/bridge_ws/install/ros_ign:/home/caio/bridge_ws/install/ros_ign_gazebo_demos:/home/caio/bridge_ws/install/ros_ign_image:/home/caio/bridge_ws/install/ros_ign_gazebo:/home/caio/bridge_ws/install/ros_ign_bridge:/home/caio/turtlebot3_ws/install/turtlebot3_simulations:/home/caio/turtlebot3_ws/install/turtlebot3_gazebo:/home/caio/turtlebot3_ws/install/turtlebot3:/home/caio/turtlebot3_ws/install/turtlebot3_bringup:/home/caio/turtlebot3_ws/install/turtlebot3_node:/home/caio/turtlebot3_ws/install/turtlebot3_navigation2:/home/caio/turtlebot3_ws/install/turtlebot3_fake_node:/home/caio/turtlebot3_ws/install/turtlebot3_msgs:/home/caio/turtlebot3_ws/install/turtlebot3_description:/home/caio/turtlebot3_ws/install/turtlebot3_cartographer:/home/caio/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/caio/turtlebot3_ws/install/dynamixel_sdk:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.098898] (-) TimerEvent: {}
+[0.199347] (-) TimerEvent: {}
+[0.300031] (-) TimerEvent: {}
+[0.400603] (-) TimerEvent: {}
+[0.501188] (-) TimerEvent: {}
+[0.601921] (-) TimerEvent: {}
+[0.702339] (-) TimerEvent: {}
+[0.757377] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.802528] (-) TimerEvent: {}
+[0.846697] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/caio/anaconda3/bin/python3\n'}
+[0.902654] (-) TimerEvent: {}
+[1.003065] (-) TimerEvent: {}
+[1.103524] (-) TimerEvent: {}
+[1.203950] (-) TimerEvent: {}
+[1.304406] (-) TimerEvent: {}
+[1.404962] (-) TimerEvent: {}
+[1.505507] (-) TimerEvent: {}
+[1.606046] (-) TimerEvent: {}
+[1.706601] (-) TimerEvent: {}
+[1.807187] (-) TimerEvent: {}
+[1.907745] (-) TimerEvent: {}
+[2.008306] (-) TimerEvent: {}
+[2.108886] (-) TimerEvent: {}
+[2.209426] (-) TimerEvent: {}
+[2.309915] (-) TimerEvent: {}
+[2.410429] (-) TimerEvent: {}
+[2.510977] (-) TimerEvent: {}
+[2.611434] (-) TimerEvent: {}
+[2.711916] (-) TimerEvent: {}
+[2.812393] (-) TimerEvent: {}
+[2.912834] (-) TimerEvent: {}
+[3.013332] (-) TimerEvent: {}
+[3.113843] (-) TimerEvent: {}
+[3.214330] (-) TimerEvent: {}
+[3.314835] (-) TimerEvent: {}
+[3.415352] (-) TimerEvent: {}
+[3.515856] (-) TimerEvent: {}
+[3.616378] (-) TimerEvent: {}
+[3.716853] (-) TimerEvent: {}
+[3.817349] (-) TimerEvent: {}
+[3.917852] (-) TimerEvent: {}
+[4.018344] (-) TimerEvent: {}
+[4.118869] (-) TimerEvent: {}
+[4.219387] (-) TimerEvent: {}
+[4.319847] (-) TimerEvent: {}
+[4.420327] (-) TimerEvent: {}
+[4.520785] (-) TimerEvent: {}
+[4.621288] (-) TimerEvent: {}
+[4.721816] (-) TimerEvent: {}
+[4.822277] (-) TimerEvent: {}
+[4.922959] (-) TimerEvent: {}
+[5.023427] (-) TimerEvent: {}
+[5.123911] (-) TimerEvent: {}
+[5.224672] (-) TimerEvent: {}
+[5.322622] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found gazebo_dev: 3.5.3 (/opt/ros/foxy/share/gazebo_dev/cmake)\n'}
+[5.324745] (-) TimerEvent: {}
+[5.425365] (-) TimerEvent: {}
+[5.499670] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") \n'}
+[5.525977] (-) TimerEvent: {}
+[5.587719] (my_arm_def_cpp_pkg) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[5.626115] (-) TimerEvent: {}
+[5.726679] (-) TimerEvent: {}
+[5.827285] (-) TimerEvent: {}
+[5.921605] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'--   Found bullet, version 2.88\n'}
+[5.927386] (-) TimerEvent: {}
+[6.027873] (-) TimerEvent: {}
+[6.128405] (-) TimerEvent: {}
+[6.228957] (-) TimerEvent: {}
+[6.329393] (-) TimerEvent: {}
+[6.374429] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") \n'}
+[6.429518] (-) TimerEvent: {}
+[6.529965] (-) TimerEvent: {}
+[6.556801] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") \n'}
+[6.630064] (-) TimerEvent: {}
+[6.707425] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.0.0") \n'}
+[6.730191] (-) TimerEvent: {}
+[6.830681] (-) TimerEvent: {}
+[6.931132] (-) TimerEvent: {}
+[7.031582] (-) TimerEvent: {}
+[7.132042] (-) TimerEvent: {}
+[7.232445] (-) TimerEvent: {}
+[7.244691] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[7.332596] (-) TimerEvent: {}
+[7.424691] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[7.432731] (-) TimerEvent: {}
+[7.533241] (-) TimerEvent: {}
+[7.617538] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") \n'}
+[7.633367] (-) TimerEvent: {}
+[7.705003] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.8.0\n'}
+[7.733561] (-) TimerEvent: {}
+[7.834413] (-) TimerEvent: {}
+[7.889604] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[7.893156] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[7.893606] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[7.900257] (my_arm_def_cpp_pkg) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[7.934534] (-) TimerEvent: {}
+[7.936921] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[8.034670] (-) TimerEvent: {}
+[8.065536] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[8.106917] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[8.116499] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[8.131208] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[8.131479] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[8.134701] (-) TimerEvent: {}
+[8.142818] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[8.143113] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[8.159250] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[8.159693] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[8.176459] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[8.176737] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[8.189804] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[8.190066] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[8.201868] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[8.234816] (-) TimerEvent: {}
+[8.335228] (-) TimerEvent: {}
+[8.435623] (-) TimerEvent: {}
+[8.528778] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.8.0\n'}
+[8.535690] (-) TimerEvent: {}
+[8.556301] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.0\n'}
+[8.558025] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[8.588372] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") \n'}
+[8.635828] (-) TimerEvent: {}
+[8.736286] (-) TimerEvent: {}
+[8.740758] (my_arm_def_cpp_pkg) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[8.791773] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'--   Found uuid, version 2.34.0\n'}
+[8.836400] (-) TimerEvent: {}
+[8.879565] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[8.901435] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.7.0\n'}
+[8.902598] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[8.936526] (-) TimerEvent: {}
+[8.937279] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.8.0\n'}
+[8.947113] (my_arm_def_cpp_pkg) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[9.000619] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'--   Found tinyxml2, version 6.2.0\n'}
+[9.036668] (-) TimerEvent: {}
+[9.101288] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.7.0\n'}
+[9.135220] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.13.2\n'}
+[9.136451] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[9.136678] (-) TimerEvent: {}
+[9.138935] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[9.142911] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[9.146247] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[9.155867] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[9.236831] (-) TimerEvent: {}
+[9.248327] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.13.2\n'}
+[9.249633] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[9.250533] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.8.0\n'}
+[9.276154] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.3.0\n'}
+[9.277255] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[9.336958] (-) TimerEvent: {}
+[9.437403] (-) TimerEvent: {}
+[9.494855] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  \n'}
+[9.535729] (my_arm_def_cpp_pkg) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[9.537480] (-) TimerEvent: {}
+[9.587389] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'--   Found jsoncpp, version 1.7.4\n'}
+[9.637618] (-) TimerEvent: {}
+[9.677909] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[9.695239] (my_arm_def_cpp_pkg) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[9.737754] (-) TimerEvent: {}
+[9.750740] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'--   Found libzip, version 1.5.1\n'}
+[9.836863] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[9.837258] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.13.2\n'}
+[9.837591] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.7.0\n'}
+[9.837770] (-) TimerEvent: {}
+[9.840410] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Gazebo version: 11.5\n'}
+[9.858972] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.5.3 (/opt/ros/foxy/share/gazebo_msgs/cmake)\n'}
+[9.937908] (-) TimerEvent: {}
+[10.038310] (-) TimerEvent: {}
+[10.138820] (-) TimerEvent: {}
+[10.239315] (-) TimerEvent: {}
+[10.339759] (-) TimerEvent: {}
+[10.440228] (-) TimerEvent: {}
+[10.463108] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[10.496210] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[10.540388] (-) TimerEvent: {}
+[10.640863] (-) TimerEvent: {}
+[10.741295] (-) TimerEvent: {}
+[10.834873] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.841383] (-) TimerEvent: {}
+[10.941763] (-) TimerEvent: {}
+[11.042254] (-) TimerEvent: {}
+[11.142711] (-) TimerEvent: {}
+[11.243104] (-) TimerEvent: {}
+[11.267819] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found gazebo_ros: 3.5.3 (/opt/ros/foxy/share/gazebo_ros/cmake)\n'}
+[11.343260] (-) TimerEvent: {}
+[11.442128] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[11.443333] (-) TimerEvent: {}
+[11.460655] (my_arm_def_cpp_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[11.543468] (-) TimerEvent: {}
+[11.643883] (-) TimerEvent: {}
+[11.744307] (-) TimerEvent: {}
+[11.746935] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found example_interfaces: 0.9.1 (/opt/ros/foxy/share/example_interfaces/cmake)\n'}
+[11.844454] (-) TimerEvent: {}
+[11.944874] (-) TimerEvent: {}
+[11.972312] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.4 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[12.045030] (-) TimerEvent: {}
+[12.060107] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Found std_srvs: 2.0.4 (/opt/ros/foxy/share/std_srvs/cmake)\n'}
+[12.145219] (-) TimerEvent: {}
+[12.245932] (-) TimerEvent: {}
+[12.346675] (-) TimerEvent: {}
+[12.447179] (-) TimerEvent: {}
+[12.547593] (-) TimerEvent: {}
+[12.589067] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[12.647715] (-) TimerEvent: {}
+[12.748109] (-) TimerEvent: {}
+[12.848566] (-) TimerEvent: {}
+[12.949092] (-) TimerEvent: {}
+[13.049607] (-) TimerEvent: {}
+[13.150067] (-) TimerEvent: {}
+[13.250460] (-) TimerEvent: {}
+[13.350977] (-) TimerEvent: {}
+[13.451708] (-) TimerEvent: {}
+[13.552257] (-) TimerEvent: {}
+[13.652765] (-) TimerEvent: {}
+[13.753275] (-) TimerEvent: {}
+[13.815752] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[13.821837] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/caio/my_arm_def/build/my_arm_def_cpp_pkg\n'}
+[13.853379] (-) TimerEvent: {}
+[13.871874] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target arm_control\x1b[0m\n'}
+[13.953521] (-) TimerEvent: {}
+[14.053984] (-) TimerEvent: {}
+[14.154393] (-) TimerEvent: {}
+[14.254918] (-) TimerEvent: {}
+[14.355406] (-) TimerEvent: {}
+[14.455870] (-) TimerEvent: {}
+[14.556204] (-) TimerEvent: {}
+[14.656617] (-) TimerEvent: {}
+[14.757073] (-) TimerEvent: {}
+[14.816831] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/arm_control.dir/src/arm_control.cpp.o\x1b[0m\n'}
+[14.857200] (-) TimerEvent: {}
+[14.957646] (-) TimerEvent: {}
+[15.058082] (-) TimerEvent: {}
+[15.158533] (-) TimerEvent: {}
+[15.259040] (-) TimerEvent: {}
+[15.359494] (-) TimerEvent: {}
+[15.459915] (-) TimerEvent: {}
+[15.560440] (-) TimerEvent: {}
+[15.660856] (-) TimerEvent: {}
+[15.761314] (-) TimerEvent: {}
+[15.861800] (-) TimerEvent: {}
+[15.962465] (-) TimerEvent: {}
+[16.063230] (-) TimerEvent: {}
+[16.163770] (-) TimerEvent: {}
+[16.264547] (-) TimerEvent: {}
+[16.365110] (-) TimerEvent: {}
+[16.465843] (-) TimerEvent: {}
+[16.566533] (-) TimerEvent: {}
+[16.667013] (-) TimerEvent: {}
+[16.767531] (-) TimerEvent: {}
+[16.868016] (-) TimerEvent: {}
+[16.968446] (-) TimerEvent: {}
+[17.068978] (-) TimerEvent: {}
+[17.169541] (-) TimerEvent: {}
+[17.270238] (-) TimerEvent: {}
+[17.370693] (-) TimerEvent: {}
+[17.471249] (-) TimerEvent: {}
+[17.571851] (-) TimerEvent: {}
+[17.672335] (-) TimerEvent: {}
+[17.772805] (-) TimerEvent: {}
+[17.873290] (-) TimerEvent: {}
+[17.973700] (-) TimerEvent: {}
+[18.074142] (-) TimerEvent: {}
+[18.174845] (-) TimerEvent: {}
+[18.275291] (-) TimerEvent: {}
+[18.375807] (-) TimerEvent: {}
+[18.476415] (-) TimerEvent: {}
+[18.576887] (-) TimerEvent: {}
+[18.677330] (-) TimerEvent: {}
+[18.777766] (-) TimerEvent: {}
+[18.878213] (-) TimerEvent: {}
+[18.978687] (-) TimerEvent: {}
+[19.079094] (-) TimerEvent: {}
+[19.179504] (-) TimerEvent: {}
+[19.279936] (-) TimerEvent: {}
+[19.380365] (-) TimerEvent: {}
+[19.480792] (-) TimerEvent: {}
+[19.581242] (-) TimerEvent: {}
+[19.681682] (-) TimerEvent: {}
+[19.782123] (-) TimerEvent: {}
+[19.882566] (-) TimerEvent: {}
+[19.983009] (-) TimerEvent: {}
+[20.083626] (-) TimerEvent: {}
+[20.184103] (-) TimerEvent: {}
+[20.284552] (-) TimerEvent: {}
+[20.385202] (-) TimerEvent: {}
+[20.485659] (-) TimerEvent: {}
+[20.586292] (-) TimerEvent: {}
+[20.686739] (-) TimerEvent: {}
+[20.787452] (-) TimerEvent: {}
+[20.887903] (-) TimerEvent: {}
+[20.988569] (-) TimerEvent: {}
+[21.089024] (-) TimerEvent: {}
+[21.189471] (-) TimerEvent: {}
+[21.289921] (-) TimerEvent: {}
+[21.390596] (-) TimerEvent: {}
+[21.491065] (-) TimerEvent: {}
+[21.591476] (-) TimerEvent: {}
+[21.691790] (-) TimerEvent: {}
+[21.792127] (-) TimerEvent: {}
+[21.892469] (-) TimerEvent: {}
+[21.992862] (-) TimerEvent: {}
+[22.093259] (-) TimerEvent: {}
+[22.193701] (-) TimerEvent: {}
+[22.294143] (-) TimerEvent: {}
+[22.394797] (-) TimerEvent: {}
+[22.495232] (-) TimerEvent: {}
+[22.595619] (-) TimerEvent: {}
+[22.696048] (-) TimerEvent: {}
+[22.796731] (-) TimerEvent: {}
+[22.897164] (-) TimerEvent: {}
+[22.997606] (-) TimerEvent: {}
+[23.098248] (-) TimerEvent: {}
+[23.198900] (-) TimerEvent: {}
+[23.299555] (-) TimerEvent: {}
+[23.400207] (-) TimerEvent: {}
+[23.500673] (-) TimerEvent: {}
+[23.601120] (-) TimerEvent: {}
+[23.701835] (-) TimerEvent: {}
+[23.802283] (-) TimerEvent: {}
+[23.902730] (-) TimerEvent: {}
+[24.003162] (-) TimerEvent: {}
+[24.103557] (-) TimerEvent: {}
+[24.203970] (-) TimerEvent: {}
+[24.304382] (-) TimerEvent: {}
+[24.404781] (-) TimerEvent: {}
+[24.505203] (-) TimerEvent: {}
+[24.605646] (-) TimerEvent: {}
+[24.706316] (-) TimerEvent: {}
+[24.806760] (-) TimerEvent: {}
+[24.907157] (-) TimerEvent: {}
+[25.007602] (-) TimerEvent: {}
+[25.108028] (-) TimerEvent: {}
+[25.208434] (-) TimerEvent: {}
+[25.308827] (-) TimerEvent: {}
+[25.409312] (-) TimerEvent: {}
+[25.509865] (-) TimerEvent: {}
+[25.610312] (-) TimerEvent: {}
+[25.710752] (-) TimerEvent: {}
+[25.811149] (-) TimerEvent: {}
+[25.911562] (-) TimerEvent: {}
+[26.011996] (-) TimerEvent: {}
+[26.112426] (-) TimerEvent: {}
+[26.212857] (-) TimerEvent: {}
+[26.313367] (-) TimerEvent: {}
+[26.413865] (-) TimerEvent: {}
+[26.514362] (-) TimerEvent: {}
+[26.614799] (-) TimerEvent: {}
+[26.715182] (-) TimerEvent: {}
+[26.815618] (-) TimerEvent: {}
+[26.916005] (-) TimerEvent: {}
+[27.016452] (-) TimerEvent: {}
+[27.116859] (-) TimerEvent: {}
+[27.217291] (-) TimerEvent: {}
+[27.317703] (-) TimerEvent: {}
+[27.418314] (-) TimerEvent: {}
+[27.518963] (-) TimerEvent: {}
+[27.619354] (-) TimerEvent: {}
+[27.719770] (-) TimerEvent: {}
+[27.820188] (-) TimerEvent: {}
+[27.920578] (-) TimerEvent: {}
+[28.021218] (-) TimerEvent: {}
+[28.121860] (-) TimerEvent: {}
+[28.222500] (-) TimerEvent: {}
+[28.322964] (-) TimerEvent: {}
+[28.423343] (-) TimerEvent: {}
+[28.523685] (-) TimerEvent: {}
+[28.624115] (-) TimerEvent: {}
+[28.724531] (-) TimerEvent: {}
+[28.825574] (-) TimerEvent: {}
+[28.926015] (-) TimerEvent: {}
+[29.026440] (-) TimerEvent: {}
+[29.126861] (-) TimerEvent: {}
+[29.227268] (-) TimerEvent: {}
+[29.327667] (-) TimerEvent: {}
+[29.428136] (-) TimerEvent: {}
+[29.528622] (-) TimerEvent: {}
+[29.629111] (-) TimerEvent: {}
+[29.729534] (-) TimerEvent: {}
+[29.830033] (-) TimerEvent: {}
+[29.856552] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libarm_control.so\x1b[0m\n'}
+[29.930173] (-) TimerEvent: {}
+[30.030697] (-) TimerEvent: {}
+[30.131217] (-) TimerEvent: {}
+[30.231668] (-) TimerEvent: {}
+[30.332161] (-) TimerEvent: {}
+[30.432682] (-) TimerEvent: {}
+[30.533098] (-) TimerEvent: {}
+[30.633584] (-) TimerEvent: {}
+[30.734083] (-) TimerEvent: {}
+[30.834562] (-) TimerEvent: {}
+[30.935058] (-) TimerEvent: {}
+[31.035604] (-) TimerEvent: {}
+[31.136154] (-) TimerEvent: {}
+[31.236715] (-) TimerEvent: {}
+[31.337265] (-) TimerEvent: {}
+[31.437709] (-) TimerEvent: {}
+[31.538145] (-) TimerEvent: {}
+[31.638719] (-) TimerEvent: {}
+[31.739196] (-) TimerEvent: {}
+[31.839662] (-) TimerEvent: {}
+[31.940193] (-) TimerEvent: {}
+[32.040731] (-) TimerEvent: {}
+[32.141538] (-) TimerEvent: {}
+[32.242787] (-) TimerEvent: {}
+[32.343343] (-) TimerEvent: {}
+[32.443865] (-) TimerEvent: {}
+[32.544423] (-) TimerEvent: {}
+[32.644939] (-) TimerEvent: {}
+[32.745442] (-) TimerEvent: {}
+[32.846016] (-) TimerEvent: {}
+[32.946603] (-) TimerEvent: {}
+[33.047125] (-) TimerEvent: {}
+[33.147672] (-) TimerEvent: {}
+[33.248199] (-) TimerEvent: {}
+[33.348637] (-) TimerEvent: {}
+[33.364360] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'[100%] Built target arm_control\n'}
+[33.377277] (my_arm_def_cpp_pkg) CommandEnded: {'returncode': 0}
+[33.428079] (my_arm_def_cpp_pkg) JobProgress: {'identifier': 'my_arm_def_cpp_pkg', 'progress': 'install'}
+[33.445379] (my_arm_def_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg'], 'cwd': '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'pt_BR:pt:en'), ('USER', 'caio'), ('SSH_AGENT_PID', '2547'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/caio/my_arm_def/install/my_arm_def_interfaces/lib:/home/caio/ros2_ws/install/my_try_robot/lib:/home/caio/ros2_ws/install/my_robot_interfaces/lib:/home/caio/ros2_ws/install/my_arm/lib:/home/caio/ros2_ws/install/gazebo_ros_action_tutorial/lib:/home/caio/bridge_ws/install/ros_ign_bridge/lib:/home/caio/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/caio/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/caio/velodyne_plugin/build'), ('HOME', '/home/caio'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/caio'), ('DESKTOP_SESSION', 'ubuntu-wayland'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('MANAGERPID', '2322'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-wayland.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/caio/bridge_ws/install:/home/caio/ros2_ws/install:/home/caio/ROS2_arm_py/install:/home/caio/turtlebot3_ws/install:/home/caio/my_arm_def/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'caio'), ('JOURNAL_STREAM', '8:54757'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-wayland.default.path'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/home/caio/ros2_ws/src/my_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/caio/anaconda3/bin:/home/caio/anaconda3/condabin:/opt/ros/foxy/bin:/home/caio/.local/bin:/home/caio/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/caio-Nitro-AN515-43:@/tmp/.ICE-unix/2613,unix/caio-Nitro-AN515-43:/tmp/.ICE-unix/2613'), ('GDM_LANG', 'pt_BR'), ('INVOCATION_ID', '533e3eee811743ec813e4a1fd9e24940'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c27596b5_2c59_485d_8428_77d40e7e9c57'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-wayland'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.TTITS1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.218'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/caio'), ('AMENT_PREFIX_PATH', '/home/caio/my_arm_def/install/my_arm_definitive_bringup:/home/caio/my_arm_def/install/my_arm_def_bringup:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/my_arm_def/install/my_arm_def_interfaces:/home/caio/my_arm_def/install/my_arm_def_cpp_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/my_robot_bringup:/home/caio/ros2_ws/install/turtlesim_project_cpp:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_try_robot:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_cpp_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_robot_interfaces:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/my_arm:/home/caio/ros2_ws/install/lydar:/home/caio/ros2_ws/install/gazebo_ros_action_tutorial:/home/caio/ros2_ws/install/bocbot:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/bridge_ws/install/ros_ign:/home/caio/bridge_ws/install/ros_ign_gazebo_demos:/home/caio/bridge_ws/install/ros_ign_image:/home/caio/bridge_ws/install/ros_ign_gazebo:/home/caio/bridge_ws/install/ros_ign_bridge:/home/caio/turtlebot3_ws/install/turtlebot3_simulations:/home/caio/turtlebot3_ws/install/turtlebot3_gazebo:/home/caio/turtlebot3_ws/install/turtlebot3:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_bringup:/home/caio/turtlebot3_ws/install/turtlebot3_node:/home/caio/turtlebot3_ws/install/turtlebot3_navigation2:/home/caio/turtlebot3_ws/install/turtlebot3_fake_node:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/turtlebot3_msgs:/home/caio/turtlebot3_ws/install/turtlebot3_description:/home/caio/turtlebot3_ws/install/turtlebot3_cartographer:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/home/caio/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/caio/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/caio/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-wayland'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo_models:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/caio/my_arm_def/build/my_arm_def_cpp_pkg'), ('QT_QPA_PLATFORM', 'xcb'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-wayland:/etc/xdg'), ('CONDA_EXE', '/home/caio/anaconda3/bin/conda'), ('GAZEBO_PLUGIN_PATH', '/home/caio/ros2_ws/install/gazebo_ros_action_tutorial/lib/:/home/caio/ros2_ws/install/my_try_robot/lib:/home/caio/ros2_ws/install/my_arm/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-wayland:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/caio/my_arm_def/build/my_arm_def_py_pkg:/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:/home/caio/my_arm_def/install/my_arm_def_interfaces/lib/python3.8/site-packages:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg/lib/python3.8/site-packages:/home/caio/ROS2_arm_py/install/my-test-package/lib/python3.8/site-packages:/home/caio/ros2_ws/install/turtlesim_catch_them_all/lib/python3.8/site-packages:/home/caio/ros2_ws/install/my_py_pkg/lib/python3.8/site-packages:/home/caio/ros2_ws/build/my_arm_py:/home/caio/ros2_ws/install/my_arm_py/lib/python3.8/site-packages:/home/caio/ros2_ws/install/my_robot_interfaces/lib/python3.8/site-packages:/home/caio/ros2_ws/install/my_package/lib/python3.8/site-packages:/home/caio/ros2_ws/install/big_bazu/lib/python3.8/site-packages:/home/caio/ros2_ws/install/bigBazu/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/build/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/build/turtlebot3_example:/home/caio/turtlebot3_ws/install/turtlebot3_example/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/home/caio/turtlebot3_ws/build/robot_spawner_pkg:/home/caio/turtlebot3_ws/install/robot_spawner_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/caio/anaconda3'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/caio/my_arm_def/install/my_arm_definitive_bringup:/home/caio/my_arm_def/install/my_arm_def_bringup:/home/caio/my_arm_def/install/my_arm_def_interfaces:/home/caio/my_arm_def/install/my_arm_def_cpp_pkg:/home/caio/ros2_ws/install/my_robot_bringup:/home/caio/ros2_ws/install/turtlesim_project_cpp:/home/caio/ros2_ws/install/my_try_robot:/home/caio/ros2_ws/install/my_cpp_pkg:/home/caio/ros2_ws/install/my_robot_interfaces:/home/caio/ros2_ws/install/my_arm:/home/caio/ros2_ws/install/lydar:/home/caio/ros2_ws/install/gazebo_ros_action_tutorial:/home/caio/ros2_ws/install/bocbot:/home/caio/bridge_ws/install/ros_ign:/home/caio/bridge_ws/install/ros_ign_gazebo_demos:/home/caio/bridge_ws/install/ros_ign_image:/home/caio/bridge_ws/install/ros_ign_gazebo:/home/caio/bridge_ws/install/ros_ign_bridge:/home/caio/turtlebot3_ws/install/turtlebot3_simulations:/home/caio/turtlebot3_ws/install/turtlebot3_gazebo:/home/caio/turtlebot3_ws/install/turtlebot3:/home/caio/turtlebot3_ws/install/turtlebot3_bringup:/home/caio/turtlebot3_ws/install/turtlebot3_node:/home/caio/turtlebot3_ws/install/turtlebot3_navigation2:/home/caio/turtlebot3_ws/install/turtlebot3_fake_node:/home/caio/turtlebot3_ws/install/turtlebot3_msgs:/home/caio/turtlebot3_ws/install/turtlebot3_description:/home/caio/turtlebot3_ws/install/turtlebot3_cartographer:/home/caio/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/caio/turtlebot3_ws/install/dynamixel_sdk:/home/caio/my_arm_def/install/my_arm_def_py_pkg:/home/caio/ROS2_arm_py/install/ros2_arm_py_pkg:/home/caio/ros2_ws/install/turtlesim_catch_them_all:/home/caio/ros2_ws/install/my_py_pkg:/home/caio/ros2_ws/install/my_arm_py:/home/caio/ros2_ws/install/my_package:/home/caio/ros2_ws/install/big_bazu:/home/caio/ros2_ws/install/bigBazu:/home/caio/turtlebot3_ws/install/turtlebot3_teleop:/home/caio/turtlebot3_ws/install/turtlebot3_example:/home/caio/turtlebot3_ws/install/robot_spawner_pkg:/opt/ros/foxy')]), 'shell': False}
+[33.449964] (-) TimerEvent: {}
+[33.462810] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[33.463395] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/library_path.sh\n'}
+[33.463616] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/library_path.dsv\n'}
+[33.463818] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/include\n'}
+[33.464001] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/include/my_arm_def_cpp_pkg\n'}
+[33.464187] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/lib/libarm_control.so\n'}
+[33.468136] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/caio/my_arm_def/install/my_arm_def_cpp_pkg/lib/libarm_control.so" to ""\n'}
+[33.468608] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg//worlds\n'}
+[33.468888] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg//worlds/braco_com_mesa.world\n'}
+[33.548743] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/my_arm_def_cpp_pkg\n'}
+[33.549236] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/my_arm_def_cpp_pkg\n'}
+[33.549566] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/ament_prefix_path.sh\n'}
+[33.549778] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/ament_prefix_path.dsv\n'}
+[33.550177] (-) TimerEvent: {}
+[33.550473] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/path.sh\n'}
+[33.550813] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/path.dsv\n'}
+[33.551148] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.bash\n'}
+[33.551376] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.sh\n'}
+[33.551736] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.zsh\n'}
+[33.552155] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.dsv\n'}
+[33.552506] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.dsv\n'}
+[33.552925] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/packages/my_arm_def_cpp_pkg\n'}
+[33.553199] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[33.553469] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig.cmake\n'}
+[33.553734] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig-version.cmake\n'}
+[33.553999] (my_arm_def_cpp_pkg) StdoutLine: {'line': b'-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.xml\n'}
+[33.556480] (my_arm_def_cpp_pkg) CommandEnded: {'returncode': 0}
+[33.650368] (-) TimerEvent: {}
+[33.750913] (-) TimerEvent: {}
+[33.851400] (-) TimerEvent: {}
+[33.951953] (-) TimerEvent: {}
+[34.052415] (-) TimerEvent: {}
+[34.153357] (-) TimerEvent: {}
+[34.186478] (my_arm_def_cpp_pkg) JobEnded: {'identifier': 'my_arm_def_cpp_pkg', 'rc': 0}
+[34.187800] (-) EventReactorShutdown: {}

@@ -80,6 +80,28 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,28 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named arm_control
+
+# Build rule for target.
+arm_control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 arm_control
+.PHONY : arm_control
+
+# fast build rule for target.
+arm_control/fast:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/build
+.PHONY : arm_control/fast
+
+#=============================================================================
 # Target rules for targets named my_arm_def_cpp_pkg_uninstall
 
 # Build rule for target.
@@ -193,6 +206,33 @@ uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
+src/arm_control.o: src/arm_control.cpp.o
+
+.PHONY : src/arm_control.o
+
+# target to build an object file
+src/arm_control.cpp.o:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/src/arm_control.cpp.o
+.PHONY : src/arm_control.cpp.o
+
+src/arm_control.i: src/arm_control.cpp.i
+
+.PHONY : src/arm_control.i
+
+# target to preprocess a source file
+src/arm_control.cpp.i:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/src/arm_control.cpp.i
+.PHONY : src/arm_control.cpp.i
+
+src/arm_control.s: src/arm_control.cpp.s
+
+.PHONY : src/arm_control.s
+
+# target to generate assembly for a file
+src/arm_control.cpp.s:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/src/arm_control.cpp.s
+.PHONY : src/arm_control.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -201,13 +241,17 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... arm_control"
 	@echo "... my_arm_def_cpp_pkg_uninstall"
 	@echo "... uninstall"
+	@echo "... src/arm_control.o"
+	@echo "... src/arm_control.i"
+	@echo "... src/arm_control.s"
 .PHONY : help
 
 

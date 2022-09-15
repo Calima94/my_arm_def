@@ -1,0 +1,108 @@
+-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /home/caio/anaconda3/bin/python3
+-- Found gazebo_dev: 3.5.3 (/opt/ros/foxy/share/gazebo_dev/cmake)
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'bullet>=2.82'
+--   Found bullet, version 2.88
+-- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") 
+-- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") 
+-- Found assimp: /usr/include (found version "5.0.0") 
+-- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+-- Looking for ignition-math6 -- found version 6.8.0
+-- Searching for dependencies of ignition-math6
+-- Looking for OGRE...
+-- OGRE_PREFIX_WATCH changed.
+-- Checking for module 'OGRE'
+--   Found OGRE, version 1.9.0
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Looking for ignition-math6 -- found version 6.8.0
+-- Looking for ignition-transport8 -- found version 8.2.0
+-- Searching for dependencies of ignition-transport8
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+-- Checking for module 'uuid'
+--   Found uuid, version 2.34.0
+-- Found UUID: TRUE  
+-- Looking for ignition-msgs5 -- found version 5.7.0
+-- Searching for dependencies of ignition-msgs5
+-- Looking for ignition-math6 -- found version 6.8.0
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.2.0
+-- Looking for ignition-msgs5 -- found version 5.7.0
+-- Looking for ignition-common3 -- found version 3.13.2
+-- Searching for dependencies of ignition-common3
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE  
+-- Searching for <ignition-common3> component [graphics]
+-- Looking for ignition-common3-graphics -- found version 3.13.2
+-- Searching for dependencies of ignition-common3-graphics
+-- Looking for ignition-math6 -- found version 6.8.0
+-- Looking for ignition-fuel_tools4 -- found version 4.3.0
+-- Searching for dependencies of ignition-fuel_tools4
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Found JSONCPP: TRUE  
+-- Checking for module 'libzip'
+--   Found libzip, version 1.5.1
+-- Found ZIP: TRUE  
+-- Looking for ignition-common3 -- found version 3.13.2
+-- Looking for ignition-msgs5 -- found version 5.7.0
+-- Gazebo version: 11.5
+-- Found gazebo_msgs: 3.5.3 (/opt/ros/foxy/share/gazebo_msgs/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found gazebo_ros: 3.5.3 (/opt/ros/foxy/share/gazebo_ros/cmake)
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found example_interfaces: 0.9.1 (/opt/ros/foxy/share/example_interfaces/cmake)
+-- Found sensor_msgs: 2.0.4 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found std_srvs: 2.0.4 (/opt/ros/foxy/share/std_srvs/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/caio/my_arm_def/build/my_arm_def_cpp_pkg
+[35m[1mScanning dependencies of target arm_control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/arm_control.dir/src/arm_control.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libarm_control.so[0m
+[100%] Built target arm_control
+-- Install configuration: ""
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/library_path.sh
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/library_path.dsv
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/include
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/include/my_arm_def_cpp_pkg
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/lib/libarm_control.so
+-- Set runtime path of "/home/caio/my_arm_def/install/my_arm_def_cpp_pkg/lib/libarm_control.so" to ""
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg//worlds
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg//worlds/braco_com_mesa.world
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/my_arm_def_cpp_pkg
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/my_arm_def_cpp_pkg
+-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/path.sh
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/environment/path.dsv
+-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.bash
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.sh
+-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.zsh
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/local_setup.dsv
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.dsv
+-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/ament_index/resource_index/packages/my_arm_def_cpp_pkg
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig.cmake
+-- Up-to-date: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/cmake/my_arm_def_cpp_pkgConfig-version.cmake
+-- Installing: /home/caio/my_arm_def/install/my_arm_def_cpp_pkg/share/my_arm_def_cpp_pkg/package.xml

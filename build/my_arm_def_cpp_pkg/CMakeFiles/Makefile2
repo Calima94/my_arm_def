@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/caio/my_arm_def/build/my_arm_def_cpp_pkg
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/arm_control.dir/all
 
 .PHONY : all
 
@@ -63,10 +63,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/arm_control.dir/clean
 clean: CMakeFiles/my_arm_def_cpp_pkg_uninstall.dir/clean
 clean: CMakeFiles/uninstall.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/arm_control.dir
+
+# All Build rule for target.
+CMakeFiles/arm_control.dir/all:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/depend
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/caio/my_arm_def/build/my_arm_def_cpp_pkg/CMakeFiles --progress-num=1,2 "Built target arm_control"
+.PHONY : CMakeFiles/arm_control.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/arm_control.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/caio/my_arm_def/build/my_arm_def_cpp_pkg/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arm_control.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/caio/my_arm_def/build/my_arm_def_cpp_pkg/CMakeFiles 0
+.PHONY : CMakeFiles/arm_control.dir/rule
+
+# Convenience name for target.
+arm_control: CMakeFiles/arm_control.dir/rule
+
+.PHONY : arm_control
+
+# clean rule for target.
+CMakeFiles/arm_control.dir/clean:
+	$(MAKE) -f CMakeFiles/arm_control.dir/build.make CMakeFiles/arm_control.dir/clean
+.PHONY : CMakeFiles/arm_control.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/my_arm_def_cpp_pkg_uninstall.dir

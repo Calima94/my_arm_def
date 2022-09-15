@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000446] (-) JobUnselected: {'identifier': 'my_arm'}
+[0.000538] (-) JobUnselected: {'identifier': 'my_arm_def_bringup'}
+[0.000632] (-) JobUnselected: {'identifier': 'my_arm_def_interfaces'}
+[0.000726] (-) JobUnselected: {'identifier': 'my_arm_def_py_pkg'}
+[0.000818] (-) JobUnselected: {'identifier': 'my_arm_definitive_bringup'}
+[0.000885] (-) EventReactorShutdown: {}
