@@ -1,1 +1,3 @@
-My_arm_def_file
+# ROS2 arm project using Myo arm-band
+
+
