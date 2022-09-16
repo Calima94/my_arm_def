@@ -1,3 +1,3 @@
-# ROS2 arm project using Myo arm-band
+# ROS2 arm project using Myo armband
 
 
