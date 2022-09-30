@@ -45,16 +45,16 @@ class MyoRawNode(Node):
             pos_atual_braco = new_pos - self.braco_first_position
             #print("braco_pos" + str(pos_atual_braco))
             pos_braco_degree = math.degrees(pos_atual_braco)
-            self.get_logger().info('A posicao do braco eh: ' +
-                                   str(pos_braco_degree) + 'graus')
+            #self.get_logger().info('A posicao do braco eh: ' +
+                                   #str(pos_braco_degree) + 'graus')
             self.call_send_position_wanted(pos_atual_braco)
 
     def callback_antebraco_pos(self, msg):
         self.antebraco_pos = msg.data
         pos_antebraco_degree = self.positions_to_use[int(msg.data)]
         pos_antebraco_rad = math.radians(pos_antebraco_degree)
-        self.get_logger().info('A posicao do antebraco eh: ' +
-                                   str(pos_antebraco_degree) + 'graus')
+        #self.get_logger().info('A posicao do antebraco eh: ' +
+                                   #str(pos_antebraco_degree) + 'graus')
         self.call_send_position_wanted_1(pos_antebraco_rad)
 
 

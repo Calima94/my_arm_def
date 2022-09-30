@@ -23,7 +23,10 @@ def generate_launch_description():
 
     capture_braco_pos_node = Node(package="my_arm_def_py_pkg",
                                   executable="capture_braco_pos")
-
+    
+    #ld.add_action(ExecuteProcess(cmd=['gazebo','-s','libgazebo_ros_factory.so'],output='screen'))
+    #ld.add_action(ExecuteProcess( cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so'], output='screen'))
+    ld.add_action(ExecuteProcess( cmd=['gazebo', '-s', 'libgazebo_ros_factory.so'], output='screen'))
     ld.add_action(spawn_arm_node)
     ld.add_action(arm_controller_node)
     ld.add_action(myo_raw_node)

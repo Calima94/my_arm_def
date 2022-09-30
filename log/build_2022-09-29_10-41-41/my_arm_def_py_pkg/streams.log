@@ -1,0 +1,20 @@
+[1.647s] Invoking command in '/home/caio/my_arm_def/build/my_arm_def_py_pkg': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/caio/my_arm_def/install/my_arm_def_py_pkg --editable --build-directory /home/caio/my_arm_def/build/my_arm_def_py_pkg/build --no-deps install_data --install-dir /home/caio/my_arm_def/install/my_arm_def_py_pkg
+[2.151s] running develop
+[2.507s] running egg_info
+[2.507s] writing my_arm_def_py_pkg.egg-info/PKG-INFO
+[2.507s] writing dependency_links to my_arm_def_py_pkg.egg-info/dependency_links.txt
+[2.507s] writing entry points to my_arm_def_py_pkg.egg-info/entry_points.txt
+[2.507s] writing requirements to my_arm_def_py_pkg.egg-info/requires.txt
+[2.508s] writing top-level names to my_arm_def_py_pkg.egg-info/top_level.txt
+[2.904s] reading manifest file 'my_arm_def_py_pkg.egg-info/SOURCES.txt'
+[2.906s] writing manifest file 'my_arm_def_py_pkg.egg-info/SOURCES.txt'
+[3.218s] running build_ext
+[3.233s] Creating /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages/my-arm-def-py-pkg.egg-link (link to .)
+[3.234s] Installing arm_controller script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[3.248s] Installing capture_braco_pos script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[3.248s] Installing myo_raw script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[3.248s] Installing spawn_arm script to /home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/my_arm_def_py_pkg
+[3.249s] 
+[3.249s] Installed /home/caio/my_arm_def/build/my_arm_def_py_pkg
+[3.249s] running install_data
+[3.297s] Invoked command in '/home/caio/my_arm_def/build/my_arm_def_py_pkg' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/caio/my_arm_def/install/my_arm_def_py_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/caio/my_arm_def/install/my_arm_def_py_pkg --editable --build-directory /home/caio/my_arm_def/build/my_arm_def_py_pkg/build --no-deps install_data --install-dir /home/caio/my_arm_def/install/my_arm_def_py_pkg

@@ -24,7 +24,6 @@ function _colcon_prefix_chain_powershell_source_script {
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/ros/foxy\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/caio/turtlebot3_ws/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/caio/ROS2_arm_py/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/caio/ros2_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/caio/bridge_ws/install\local_setup.ps1"
 

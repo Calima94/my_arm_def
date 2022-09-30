@@ -1,15 +1,12 @@
-'''
-    Original by dzhu
-        https://github.com/dzhu/myo-raw
-
-    Edited by Fernando Cosentino
-        http://www.fernandocosentino.net/pyoconnect
-
-    Edited by Alvaro Villoslada (Alvipe)
-        https://github.com/Alvipe/myo-raw
-'''
-
 from __future__ import print_function
+
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QMessageBox, QAction
+from teste_gazebo_launcher import Ui_Form
+from subprocess import run, Popen, PIPE
+from time import sleep
+
+
 
 import enum
 import re
@@ -17,18 +14,21 @@ import struct
 import sys
 import threading
 import time
-import pandas as pd
+
 import serial
 from serial.tools.list_ports import comports
-import math
 
 from common import *
-Emg_total = []
-#first_time = time.time()
-data_to_class = []
-quartenion = []
+import os
+from signal import SIGINT
 
 
+running_ = False
+#import roslaunch
+#from signal import SIGINT
+
+
+# Do not set `stdout=PIPE, stderr=STDOUT`, instead inherit from parent
 def multichr(ords):
     if sys.version_info[0] >= 3:
         return bytes(ords)
@@ -115,8 +115,7 @@ class BT(object):
 
     def proc_byte(self, c):
         if not self.buf:
-            # [BLE response pkt, BLE event pkt, wifi response pkt, wifi event pkt]
-            if c in [0x00, 0x80, 0x08, 0x88]:
+            if c in [0x00, 0x80, 0x08, 0x88]:  # [BLE response pkt, BLE event pkt, wifi response pkt, wifi event pkt]
                 self.buf.append(c)
             return None
         elif len(self.buf) == 1:
@@ -151,7 +150,6 @@ class BT(object):
         def h(p):
             if p.cls == cls and p.cmd == cmd:
                 res[0] = p
-
         self.add_handler(h)
         while res[0] is None:
             self.recv_packet()
@@ -160,8 +158,7 @@ class BT(object):
 
     # specific BLE commands
     def connect(self, addr):
-        return self.send_command(
-            6, 3, pack('6sBHHHH', multichr(addr), 0, 6, 6, 64, 0))
+        return self.send_command(6, 3, pack('6sBHHHH', multichr(addr), 0, 6, 6, 64, 0))
 
     def get_connections(self):
         return self.send_command(0, 6)
@@ -181,6 +178,8 @@ class BT(object):
 
     def write_attr(self, con, attr, val):
         self.send_command(4, 5, pack('BHB', con, attr, len(val)) + val)
+        if attr == 0x19 and val == b'\x04\x00':
+            return None
         return self.wait_event(4, 1)
 
     def send_command(self, cls, cmd, payload=b'', wait_resp=True):
@@ -198,6 +197,7 @@ class BT(object):
 
 class MyoRaw(object):
     '''Implements the Myo-specific communication protocol.'''
+
     def __init__(self, tty=None):
         if tty is None:
             tty = self.detect_tty()
@@ -215,8 +215,7 @@ class MyoRaw(object):
     def detect_tty(self):
         for p in comports():
             if re.search(r'PID=2458:0*1', p[2]):
-                #
-                #print('using device:', p[0])
+                print('using device:', p[0])
                 return p[0]
 
         return None
@@ -232,15 +231,13 @@ class MyoRaw(object):
         self.bt.disconnect(2)
 
         # start scanning
-        #print('scanning...')
+        print('scanning...')
         self.bt.discover()
         while True:
             p = self.bt.recv_packet()
-            #print('scan response:', p)
+            print('scan response:', p)
 
-            if p.payload.endswith(
-                    b'\x06\x42\x48\x12\x4A\x7F\x2C\x48\x47\xB9\xDE\x04\xA9\x01\x00\x06\xD5'
-            ):
+            if p.payload.endswith(b'\x06\x42\x48\x12\x4A\x7F\x2C\x48\x47\xB9\xDE\x04\xA9\x01\x00\x06\xD5'):
                 addr = list(multiord(p.payload[2:8]))
                 break
         self.bt.end_scan()
@@ -253,17 +250,52 @@ class MyoRaw(object):
         # get firmware version
         fw = self.read_attr(0x17)
         _, _, _, _, v0, v1, v2, v3 = unpack('BHBBHHHH', fw.payload)
+        print('firmware version: %d.%d.%d.%d' % (v0, v1, v2, v3))
 
-        name = self.read_attr(0x03)
+        self.old = (v0 == 0)
 
-        # enable IMU data
-        self.write_attr(0x1d, b'\x01\x00')
-        # enable on/off arm notifications
-        self.write_attr(0x24, b'\x02\x00')
-        # enable EMG notifications
-        self.start_raw()
-        # enable battery notifications
-        self.write_attr(0x12, b'\x01\x10')
+        if self.old:
+            # don't know what these do; Myo Connect sends them, though we get data
+            # fine without them
+            self.write_attr(0x19, b'\x01\x02\x00\x00')
+            # Subscribe for notifications from 4 EMG data channels
+            self.write_attr(0x2f, b'\x01\x00')
+            self.write_attr(0x2c, b'\x01\x00')
+            self.write_attr(0x32, b'\x01\x00')
+            self.write_attr(0x35, b'\x01\x00')
+
+            # enable EMG data
+            self.write_attr(0x28, b'\x01\x00')
+            # enable IMU data
+            self.write_attr(0x1d, b'\x01\x00')
+
+            # Sampling rate of the underlying EMG sensor, capped to 1000. If it's
+            # less than 1000, emg_hz is correct. If it is greater, the actual
+            # framerate starts dropping inversely. Also, if this is much less than
+            # 1000, EMG data becomes slower to respond to changes. In conclusion,
+            # 1000 is probably a good value.
+            C = 1000
+            emg_hz = 50
+            # strength of low-pass filtering of EMG data
+            emg_smooth = 100
+
+            imu_hz = 50
+
+            # send sensor parameters, or we don't get any data
+            self.write_attr(0x19, pack('BBBBHBBBBB', 2, 9, 2, 1, C, emg_smooth, C // emg_hz, imu_hz, 0, 0))
+
+        else:
+            name = self.read_attr(0x03)
+            print('device name: %s' % name.payload)
+
+            # enable IMU data
+            self.write_attr(0x1d, b'\x01\x00')
+            # enable on/off arm notifications
+            self.write_attr(0x24, b'\x02\x00')
+            # enable EMG notifications
+            self.start_raw()
+            # enable battery notifications
+            self.write_attr(0x12, b'\x01\x10')
 
         # add data handlers
         def handle_data(p):
@@ -299,8 +331,6 @@ class MyoRaw(object):
                 quat = vals[:4]
                 acc = vals[4:7]
                 gyro = vals[7:10]
-                global quartenion
-                quartenion = list(quat)
                 self.on_imu(quat, acc, gyro)
             # Read classifier characteristic handle
             elif attr == 0x23:
@@ -318,7 +348,6 @@ class MyoRaw(object):
                 self.on_battery(battery_level)
             else:
                 print('data with unknown attr: %02X %s' % (attr, p))
-                pass
 
         self.bt.add_handler(handle_data)
 
@@ -341,18 +370,17 @@ class MyoRaw(object):
     def power_off(self):
         self.write_attr(0x19, b'\x04\x00')
 
+
     def start_raw(self):
+
         ''' To get raw EMG signals, we subscribe to the four EMG notification
         characteristics by writing a 0x0100 command to the corresponding handles.
         '''
-        self.write_attr(0x2c,
-                        b'\x01\x00')  # Suscribe to EmgData0Characteristic
-        # Suscribe to EmgData1Characteristic
-        self.write_attr(0x2f, b'\x01\x00')
-        # Suscribe to EmgData2Characteristic
-        self.write_attr(0x32, b'\x01\x00')
-        # Suscribe to EmgData3Characteristic
-        self.write_attr(0x35, b'\x01\x00')
+        self.write_attr(0x2c, b'\x01\x00')  # Suscribe to EmgData0Characteristic
+        self.write_attr(0x2f, b'\x01\x00')  # Suscribe to EmgData1Characteristic
+        self.write_attr(0x32, b'\x01\x00')  # Suscribe to EmgData2Characteristic
+        self.write_attr(0x35, b'\x01\x00')  # Suscribe to EmgData3Characteristic
+
         '''Bytes sent to handle 0x19 (command characteristic) have the following
         format: [command, payload_size, EMG mode, IMU mode, classifier mode]
         According to the Myo BLE specification, the commands are:
@@ -363,9 +391,11 @@ class MyoRaw(object):
             0x01 -> send classifier events
         '''
         self.write_attr(0x19, b'\x01\x03\x02\x01\x01')
+
         '''Sending this sequence for v1.0 firmware seems to enable both raw data and
         pose notifications.
         '''
+
         '''By writting a 0x0100 command to handle 0x28, some kind of "hidden" EMG
         notification characteristic is activated. This characteristic is not
         listed on the Myo services of the offical BLE specification from Thalmic
@@ -392,21 +422,16 @@ class MyoRaw(object):
 
         self.write_attr(0x28, b'\x01\x00')  # Suscribe to EMG notifications
         self.write_attr(0x1d, b'\x01\x00')  # Suscribe to IMU notifications
-        # Suscribe to classifier indications
-        self.write_attr(0x24, b'\x02\x00')
-        # Set EMG and IMU, payload size = 3, EMG on, IMU on, classifier on
-        self.write_attr(0x19, b'\x01\x03\x01\x01\x01')
+        self.write_attr(0x24, b'\x02\x00')  # Suscribe to classifier indications
+        self.write_attr(0x19, b'\x01\x03\x01\x01\x01')  # Set EMG and IMU, payload size = 3, EMG on, IMU on, classifier on
         self.write_attr(0x28, b'\x01\x00')  # Suscribe to EMG notifications
         self.write_attr(0x1d, b'\x01\x00')  # Suscribe to IMU notifications
-        # Set sleep mode, payload size = 1, never go to sleep, don't know, don't know
-        self.write_attr(0x19, b'\x09\x01\x01\x00\x00')
+        self.write_attr(0x19, b'\x09\x01\x01\x00\x00')  # Set sleep mode, payload size = 1, never go to sleep, don't know, don't know
         self.write_attr(0x1d, b'\x01\x00')  # Suscribe to IMU notifications
-        # Set EMG and IMU, payload size = 3, EMG off, IMU on, classifier off
-        self.write_attr(0x19, b'\x01\x03\x00\x01\x00')
+        self.write_attr(0x19, b'\x01\x03\x00\x01\x00')  # Set EMG and IMU, payload size = 3, EMG off, IMU on, classifier off
         self.write_attr(0x28, b'\x01\x00')  # Suscribe to EMG notifications
         self.write_attr(0x1d, b'\x01\x00')  # Suscribe to IMU notifications
-        # Set EMG and IMU, payload size = 3, EMG on, IMU on, classifier off
-        self.write_attr(0x19, b'\x01\x03\x01\x01\x00')
+        self.write_attr(0x19, b'\x01\x03\x01\x01\x00')  # Set EMG and IMU, payload size = 3, EMG on, IMU on, classifier off
 
     def mc_end_collection(self):
         '''Myo Connect sends this sequence (or a reordering) when ending data collection
@@ -428,7 +453,7 @@ class MyoRaw(object):
         self.write_attr(0x19, b'\x01\x03\x01\x01\x01')
 
     def vibrate(self, length):
-        if length in xrange(1, 4):
+        if length in range(1, 4):
             # first byte tells it to vibrate; purpose of second byte is unknown (payload size?)
             self.write_attr(0x19, pack('3B', 3, 1, length))
 
@@ -475,180 +500,76 @@ class MyoRaw(object):
             h(battery_level)
 
 
-def calc_quat(quat_vec):
-    q0, q1, q2, q3 = quat_vec
-    q0 = q0 / 16384.0
-    q1 = q1 / 16384.0
-    q2 = q2 / 16384.0
-    q3 = q3 / 16384.0
-    current_pitch = -math.asin(max(-1.0, min(1.0, 2.0 * (q0 * q2 - q3 * q1))))
-    return current_pitch
 
+####################################################################################
+class LauncherGazebo(Ui_Form):
+    def __init__(self, definitions):
+        # Initiate class and Ui_Form generated by PyQt5 Designer
+        super(Ui_Form, self).__init__()
+        # Set the configurations of the file generated by PyQt5 Designer
+        self.setupUi(definitions)
 
-def catch_position(args=None):
-    global quartenion
-    #print(quartenion)
-    while (len(quartenion) == 0):
-        pass
-    angle_pitch = calc_quat(quartenion)
-    quartenion = []
-    return angle_pitch
+        self.pushButton.clicked.connect(self.launch_gazebo_on_screen)
+        self.pushButton_2.clicked.connect(self.stop_myo_and_gazebo)
+        self.pushButton_3.clicked.connect(self.exit_button)
+        self.p = None
+       
+       
 
+    def launch_gazebo_on_screen(self):
+        global running_
+        #Popen("source ~/.bashrc", shell=True, executable="/bin/bash")
+        #run(['source', '~/.bashrc'])
+        #Popen(['gazebo -s libgazebo_ros_factory.so'], stdout=PIPE, stderr=PIPE)
+        running_ = True
+        self.p = Popen(["ros2", "launch", "my_arm_definitive_bringup", "my_arm_definitive.launch.py"])
+        
+        
+        
+    def stop_myo_and_gazebo(self):
+        for _ in range(100):
+            global running_
+            m = MyoRaw()
+            
+            m.disconnect()
+            print("Disconnected")
+            self.p.send_signal(SIGINT)
+            Popen(["killall", "gzserver"])
+            Popen(["killall", "gzclient"])
+            Popen(["killall", "gazebo"])
+            running_ = False
+        
+        
+    def exit_button(self):
+        #Your desired functionality here
+        #https://pythonprogramminglanguage.com/pyqt5-message-box/
+        global running_
+        
+        
+        if  running_:
+            msg = QtWidgets.QMessageBox()
+            msg.setIcon(QtWidgets.QMessageBox.Warning)
 
-def catch_EMG_data(args=None):
-    global data_to_class
-    global Emg_total
-    while (len(data_to_class) <= 50):
-        if (len(data_to_class) == 50):
-            data_to_class_temp = data_to_class
-            data_to_class = []
-            Emg_total = []
+            # setting message for Message Box
+            msg.setText("Warning - Disconect Gazebo before closing the app")
 
-            #m.disconnect()
-            return data_to_class_temp
+            # setting Message box window title
+            msg.setWindowTitle("Closing app before desconnected Gazebo")
 
+            # declaring buttons on Message Box
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)
 
-def main(position=0.0, velocity=0.0):
-
-    #try:
-    #import pygame
-    #from pygame.locals import *
-    #HAVE_PYGAME = False
-    #except ImportError:
-    #HAVE_PYGAME = False
-
-    #if HAVE_PYGAME:
-    #w, h = 800, 600
-    #scr = pygame.display.set_mode((w, h))
-
-    last_vals = None
-
-    #def plot(scr, vals):
-    #DRAW_LINES = True
-
-    #global last_vals
-    #if last_vals is None:
-    #    last_vals = vals
-    #    return
-
-    #D = 5
-    #scr.scroll(-D)
-    #scr.fill((0, 0, 0), (w - D, 0, w, h))
-    #for i, (u, v) in enumerate(zip(last_vals, vals)):
-    #   if DRAW_LINES:
-    #      pygame.draw.line(scr, (0, 255, 0),
-    #                      (w - D, int(h/9 * (i+1 - u))),
-    #                     (w, int(h/9 * (i+1 - v))))
-    #   pygame.draw.line(scr, (255, 255, 255),
-    #                   (w - D, int(h/9 * (i+1))),
-    #                  (w, int(h/9 * (i+1))))
-    #else:
-    #   c = int(255 * max(0, min(1, v)))
-    #  scr.fill((c, c, c), (w - D, i * h / 8,
-    #                      D, (i + 1) * h / 8 - i * h / 8))
-
-    #pygame.display.flip()
-    #last_vals = vals
-
-    #m = MyoRaw(sys.argv[1] if len(sys.argv) >= 2 else None)
-    m = MyoRaw(None)
-
-    def proc_emg(emg, moving, times=[]):
-        # print(emg)
-        global list_emg
-        list_emg = list(emg)
-        global Emg_total
-        #global first_time
-        #now_ = time.time()
-        #tempo = now_ - first_time
-        global data_to_class
-        #print (list_emg)
-        if (len(Emg_total) < 50 and len(list_emg) == 8):
-            #pos_ = 10
-            #list_emg.insert(0, tempo)
-            #list_emg.insert(8, pos_)
-            Emg_total.append(list_emg)
-        if (len(Emg_total) == 50):
-            # print(Emg_total)
-            data_to_class = Emg_total
-            return data_to_class
-
-        # print framerate of received data
-
-        times.append(time.time())
-        if len(times) > 20:
-            # print((len(times) - 1) / (times[-1] - times[0]))
-            times.pop(0)
-
-    def proc_battery(battery_level):
-        # print("Battery level: %d" % battery_level)
-        if battery_level < 5:
-            m.set_leds([255, 0, 0], [255, 0, 0])
+            # start the app
+            msg.exec_()
+            
         else:
-            m.set_leds([0, 0, 255], [0, 0, 255])
+            app.quit()
 
-    m.add_emg_handler(proc_emg)
-    m.add_battery_handler(proc_battery)
-    m.connect()
-
-    #m.add_arm_handler(lambda arm, xdir: print('arm', arm, 'xdir', xdir))
-    #m.add_pose_handler(lambda p: print('pose', p))
-    # m.add_imu_handler(lambda quat, acc, gyro: print('quaternion', quat))
-    m.sleep_mode(1)
-    m.set_leds([0, 0, 255], [0, 0, 255])  # blue logo and bar LEDs
-
-    # m.vibrate(1)
-
-    def calc_quat(quat_vec):
-        q0, q1, q2, q3 = quat_vec
-        q0 = q0 / 16384.0
-        q1 = q1 / 16384.0
-        q2 = q2 / 16384.0
-        q3 = q3 / 16384.0
-        current_pitch = -math.asin(
-            max(-1.0, min(1.0, 2.0 * (q0 * q2 - q3 * q1))))
-        return current_pitch
-
-    def catch_position(args=None):
-        global quartenion
-        #print(quartenion)
-        angle_pitch = None
-        if (len(quartenion) != 0):
-            angle_pitch = calc_quat(quartenion)
-        quartenion = []
-        return angle_pitch
-
-    def catch_EMG_data(args=None):
-        global data_to_class
-        global Emg_total
-        data_to_class_temp = []
-        if (len(data_to_class) == 50):
-            data_to_class_temp = data_to_class
-            data_to_class = []
-            Emg_total = []
-
-            #m.disconnect()
-        return data_to_class_temp
-
-    try:
-        while True:
-
-            m.run(1)
-            emg_data = catch_EMG_data()
-            if (len(emg_data) == 50):
-                while True:
-                    pos_braco = catch_position()
-                    if (pos_braco != None):
-                        m.disconnect()
-                        return pos_braco, emg_data
-                    else:
-                        m.run(1)
-
-    except KeyboardInterrupt:
-        pass
-    finally:
-        m.disconnect()
 
 
 if __name__ == "__main__":
-    main()
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QWidget()
+    ui = LauncherGazebo(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

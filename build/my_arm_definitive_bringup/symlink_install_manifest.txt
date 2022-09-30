@@ -1,4 +1,4 @@
-/home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/launch/number_app.launch.py
+/home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/launch/my_arm_definitive.launch.py
 /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/ament_index/resource_index/package_run_dependencies/my_arm_definitive_bringup
 /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/ament_index/resource_index/parent_prefix_path/my_arm_definitive_bringup
 /home/caio/my_arm_def/install/my_arm_definitive_bringup/share/my_arm_definitive_bringup/environment/ament_prefix_path.sh
