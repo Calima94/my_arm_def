@@ -18,7 +18,7 @@ from my_arm_def_interfaces.srv import SendPosition
 class MyoRawNode(Node):
     def __init__(self):
         super().__init__("myo_raw")
-        self.positions_to_use = [0.0, 90.0, 120.0, 135.0, 150.0]
+        self.POSITIONS_TO_USE = [0.0, 90.0, 120.0, 135.0, 150.0]
         self.braco_pos = 0.0
         self.antebraco_pos = 0.0
         self.first_time = 0
@@ -51,7 +51,7 @@ class MyoRawNode(Node):
 
     def callback_antebraco_pos(self, msg):
         self.antebraco_pos = msg.data
-        pos_antebraco_degree = self.positions_to_use[int(msg.data)]
+        pos_antebraco_degree = self.POSITIONS_TO_USE[int(msg.data)]
         pos_antebraco_rad = math.radians(pos_antebraco_degree)
         #self.get_logger().info('A posicao do antebraco eh: ' +
                                    #str(pos_antebraco_degree) + 'graus')
