@@ -639,7 +639,7 @@ def main(position=0.0, velocity=0.0):
                 while True:
                     pos_braco = catch_position()
                     if (pos_braco != None):
-                        m.disconnect()
+                        #m.disconnect()
                         return pos_braco, emg_data
                     else:
                         m.run(1)
