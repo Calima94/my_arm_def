@@ -1,44 +1,36 @@
-# https://github.com/roboTJ101/ros_myo/blob/master/scripts/myo-rawNode.py
+'''
+    Original by dzhu
+        https://github.com/dzhu/myo-raw
 
+    Edited by Fernando Cosentino
+        http://www.fernandocosentino.net/pyoconnect
 
+    Edited by Alvaro Villoslada (Alvipe)
+        https://github.com/Alvipe/myo-raw
+'''
 
 from __future__ import print_function
 
-import argparse
 import enum
 import re
 import struct
 import sys
 import threading
 import time
-import math
+import pandas as pd
 import serial
 from serial.tools.list_ports import comports
-from common import *
-##################################################################################
-import pandas as pd
-import rclpy
-from rclpy.node import Node
-from example_interfaces.msg import Float64
-from my_arm_def_py_pkg import capture_simple_sample as css
-from my_arm_def_py_pkg import capture_EMG_sample as cem
-from time import perf_counter
-import numpy as np
+import math
 
-##########################################################################################################################
-#positions_to_use = [180.0, 90.0, 60.0, 45.0, 30.0]
-antebraco = None
-pos_braco = None
-##############################################################################################################################
+from common import *
 Emg_total = []
+#first_time = time.time()
 data_to_class = []
 quartenion = []
-old_EMG = []
-new_emg_ = []
-emg_ = None
-running = 0
+pos_braco = None
+#Novo programa_aqui
+######################3################################################
 
-##############################################################################
 def multichr(ords):
     if sys.version_info[0] >= 3:
         return bytes(ords)
@@ -506,10 +498,8 @@ class MyoRaw(object):
             h(battery_level)
 
 
+def main(position=0.0, velocity=0.0):
 
-######################################################################################################
-def myo_thread():
-    #global running
     global Emg_total
     global pos_braco
 
@@ -535,9 +525,9 @@ def myo_thread():
 
 
     def proc_emg(emg, moving, times=[]):
-        global Emg_total
+
         emg_list_ = list(emg)
-        if len(emg_list_) == 8 and len(Emg_total) < 50 :
+        if len(emg_list_) == 8:
             Emg_total.append(emg_list_)
 
 
@@ -563,6 +553,10 @@ def myo_thread():
     try:
         while True:
             m.run(1)
+            if len(Emg_total) == 50:
+                return pos_braco, Emg_total
+                break
+
 
     except KeyboardInterrupt:
         pass
@@ -571,61 +565,18 @@ def myo_thread():
             # print("Power off")
         m.disconnect()
         print("Disconnected")
-    
-    
-  
-        #print()
-            #break
-  
-# ROS Program starts here
-################################################################################################################################################################
 
-class CaptureBracoPositionNode(Node):
-    def __init__(self):
-        super().__init__("capture_braco_pos")
 
-        self.position_fo_the_arm_publisher_ = self.create_publisher(
-            Float64, "braco_pos_publisher", 10)
-        self.antebraco_pos_publisher_ = self.create_publisher(
-            Float64, "antebraco_pos_publisher", 10)
-        
-        self.time_to_pub_ = self.create_timer(1.0, self.send_positions)
 
-        self.get_logger().info("capture_braco_position_node has been started")
+###########################################################################
 
-    #def callback_position(self, msg):
-    def send_positions(self):
-        braco_to_pub = Float64()
-        antebraco_to_pub = Float64()
-        global pos_Braco
-        global Emg_total
-        global emg_
-        global quartenion
-        if len(Emg_total) == 50:
-            if pos_braco is None:
-                pass
-            else:
-                antebraco_pos = css.main(new_data=Emg_total)
-                Emg_total = []
-                antebraco_to_pub.data = antebraco_pos
-                braco_to_pub.data = pos_braco
-                self.get_logger().info("capture_antebraco_position is: " + str(antebraco_pos))
-                self.position_fo_the_arm_publisher_.publish(braco_to_pub)
-                self.antebraco_pos_publisher_.publish(antebraco_to_pub)
 
-def main(args=None):
-    threading.Thread(target=ros2_thread).start()
-    threading.Thread(target=myo_thread).start()
 
-###################################################################################################################################
-# Threads
-def ros2_thread(args=None):
-    rclpy.init(args=args)
-    node = CaptureBracoPositionNode()
-    rclpy.spin(node)
-    rclpy.shutdown()
 
-##############################################################################################################3
+
+
+
+
 
 if __name__ == "__main__":
     main()
