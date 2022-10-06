@@ -28,6 +28,20 @@ running_ = False
 #from signal import SIGINT
 
 
+'''
+    Original by dzhu
+        https://github.com/dzhu/myo-raw
+
+    Edited by Fernando Cosentino
+        http://www.fernandocosentino.net/pyoconnect
+
+    Edited by Alvaro Villoslada (Alvipe)
+        https://github.com/Alvipe/myo-raw
+        
+    Edited by Caio Lima
+        https://github.com/Calima94/Capture_EMG_Data.git
+'''
+
 # Do not set `stdout=PIPE, stderr=STDOUT`, instead inherit from parent
 def multichr(ords):
     if sys.version_info[0] >= 3:

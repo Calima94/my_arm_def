@@ -28,6 +28,20 @@ Emg_total = []
 data_to_class = []
 quartenion = []
 
+'''
+    Original by dzhu
+        https://github.com/dzhu/myo-raw
+
+    Edited by Fernando Cosentino
+        http://www.fernandocosentino.net/pyoconnect
+
+    Edited by Alvaro Villoslada (Alvipe)
+        https://github.com/Alvipe/myo-raw
+        
+    Edited by Caio Lima
+        https://github.com/Calima94/Capture_EMG_Data.git
+'''
+
 
 def multichr(ords):
     if sys.version_info[0] >= 3:
