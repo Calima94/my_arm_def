@@ -313,6 +313,9 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "launch" "DESTINATION" "share/my_arm_definitive_bringup")
 ament_cmake_symlink_install_directory("/home/caio/my_arm_def/src/my_arm_definitive_bringup" DIRECTORY "launch" "DESTINATION" "share/my_arm_definitive_bringup")
 
+# install(DIRECTORY "config" "DESTINATION" "share/my_arm_definitive_bringup")
+ament_cmake_symlink_install_directory("/home/caio/my_arm_def/src/my_arm_definitive_bringup" DIRECTORY "config" "DESTINATION" "share/my_arm_definitive_bringup")
+
 # install(FILES "/home/caio/my_arm_def/build/my_arm_definitive_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_arm_definitive_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/caio/my_arm_def/src/my_arm_definitive_bringup" FILES "/home/caio/my_arm_def/build/my_arm_definitive_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_arm_definitive_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

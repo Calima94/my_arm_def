@@ -1,10 +1,17 @@
+import os
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import ExecuteProcess
+from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
     ld = LaunchDescription()
+    config = os.path.join(
+        get_package_share_directory('my_arm_definitive_bringup'),
+        'config',
+        'params.yaml'
+        )
 
     spawn_arm_node = Node(
         package="my_arm_def_py_pkg",
@@ -14,6 +21,7 @@ def generate_launch_description():
     arm_controller_node = Node(
         package="my_arm_def_py_pkg",
         executable="arm_controller",
+        parameters=[config]
     )
 
     myo_raw_node = Node(

@@ -1,0 +1,33 @@
+arm_controller:
+  ros__parameters:
+    pos_: 0.0
+    vel_: 0.0
+    vel_atual_: 0.0
+    dest_: 0.0
+    dist_to_go_: 0.0
+    kd_: 0.1
+    kp_: 1.0
+
+    pos_1: 0.0
+    vel_1: 0.0
+    vel_atual_1: 0.0
+    dest_1: 0.0
+    dist_to_go_1: 0.0
+    kd_1: 0.1
+    kp_1: 1.0
+
+    pos_2: 0.0
+    vel_2: 0.0
+    vel_atual_2: 0.0
+    dest_2: 0.0
+    dist_to_go_2: 0.0
+    kd_2: 0.1
+    kp_2: 10
+
+    pos_3: 0.0
+    vel_3: 0.0
+    vel_atual_3: 0.0
+    dest_3: 0.0
+    dist_to_go_3: 0.0
+    kd_3: 0.1
+    kp_3: 10

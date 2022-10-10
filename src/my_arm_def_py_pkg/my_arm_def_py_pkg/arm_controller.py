@@ -3,6 +3,7 @@ import sys
 import rclpy
 import time
 import threading
+import math
 from rclpy.node import Node
 from example_interfaces.msg import Float64
 from my_arm_def_interfaces.srv import SendPosition
@@ -14,6 +15,7 @@ angle_shoulder_wanted = 0.0
 angle_elbow_wanted = 0.0
 angle_shoulder = 0.0
 angle_elbow = 0.0
+
 
 class ArmControllerNode(Node):
     def __init__(self):
@@ -49,7 +51,75 @@ class ArmControllerNode(Node):
         self.dist_to_go_3 = 0.0
         self.kd_3 = 0.1
         self.kp_3 = 10.0
+        ######################################################
+        self.declare_parameter("pos_", self.pos_)
+        self.declare_parameter("vel_", self.vel_)
+        self.declare_parameter("vel_atual_", self.vel_atual_)
+        self.declare_parameter("dest_", self.dest_)
+        self.declare_parameter("dist_to_go_", self.dist_to_go_)
+        self.declare_parameter("kd_", self.kd_)
+        self.declare_parameter("kp_", self.kp_)
+        
+        self.declare_parameter("pos_1", self.pos_1)
+        self.declare_parameter("vel_1", self.vel_1)
+        self.declare_parameter("vel_atual_1", self.vel_atual_1)
+        self.declare_parameter("dest_1", self.dest_1)
+        self.declare_parameter("dist_to_go_1", self.dist_to_go_1)
+        self.declare_parameter("kd_1", self.kd_1)
+        self.declare_parameter("kp_1", self.kp_1)
+        
+        self.declare_parameter("pos_2", self.pos_2)
+        self.declare_parameter("vel_2", self.vel_2)
+        self.declare_parameter("vel_atual_2", self.vel_atual_2)
+        self.declare_parameter("dest_2", self.dest_2)
+        self.declare_parameter("dist_to_go_2", self.dist_to_go_2)
+        self.declare_parameter("kd_2", self.kd_2)
+        self.declare_parameter("kp_2", self.kp_2)
+        
+        self.declare_parameter("pos_3", self.pos_3)
+        self.declare_parameter("vel_3", self.vel_3)
+        self.declare_parameter("vel_atual_3", self.vel_atual_3)
+        self.declare_parameter("dest_3", self.dest_3)
+        self.declare_parameter("dist_to_go_3", self.dist_to_go_3)
+        self.declare_parameter("kd_3", self.kd_3)
+        self.declare_parameter("kp_3", self.kp_3)
+        
+        self.pos_ = self.get_parameter("pos_").value
+        self.vel_ = self.get_parameter("vel_").value
+        self.vel_atual_ = self.get_parameter("vel_atual_").value
+        self.dest_ = self.get_parameter("dest_").value
+        self.dist_to_go_ = self.get_parameter("dist_to_go_").value
+        self.kd_ =  self.get_parameter("kd_").value
+        self.kp_ = self.get_parameter("kp_").value
 
+        self.pos_1 = self.get_parameter("pos_1").value
+        self.vel_1 = self.get_parameter("vel_1").value
+        self.vel_atual_1 = self.get_parameter("vel_atual_1").value
+        self.dest_1 = self.get_parameter("dest_1").value
+        self.dist_to_go_1 = self.get_parameter("dist_to_go_1").value
+        self.kd_1 =  self.get_parameter("kd_1").value
+        self.kp_1 = self.get_parameter("kp_1").value
+        
+        self.pos_2 = self.get_parameter("pos_2").value
+        self.vel_2 = self.get_parameter("vel_2").value
+        self.vel_atual_2 = self.get_parameter("vel_atual_2").value
+        self.dest_2 = self.get_parameter("dest_2").value
+        self.dist_to_go_2 = self.get_parameter("dist_to_go_2").value
+        self.kd_2 =  self.get_parameter("kd_2").value
+        self.kp_2 = self.get_parameter("kp_2").value
+        
+        self.pos_3 = self.get_parameter("pos_3").value
+        self.vel_3 = self.get_parameter("vel_3").value
+        self.vel_atual_3 = self.get_parameter("vel_atual_3").value
+        self.dest_3 = self.get_parameter("dest_3").value
+        self.dist_to_go_3 = self.get_parameter("dist_to_go_3").value
+        self.kd_3 =  self.get_parameter("kd_3").value
+        self.kp_3 = self.get_parameter("kp_3").value
+       
+
+        
+
+#############################################################################
         self.data_now_to_pub = []
 
         self.first_time = time.time()
@@ -250,10 +320,14 @@ class ShowAngles(Ui_Form):
         global angle_elbow_wanted
         global angle_shoulder
         global angle_elbow
-        self.elbow_angle_to_reach_label.setText(str(angle_elbow_wanted))
-        self.shoulder_angle_to_reach_angle.setText(str(angle_shoulder_wanted))
-        self.elbow_angle_label.setText(str(angle_elbow))
-        self.shoulder_angle_label.setText(str(angle_shoulder))
+        angle_shoulder_wanted_deg = f"{math.degrees(angle_shoulder_wanted):.2f}°"
+        angle_elbow_wanted_deg = f"{math.degrees(angle_elbow_wanted):.2f}°"
+        angle_shoulder_deg = f"{math.degrees(angle_shoulder):.2f}°"
+        angle_elbow_deg = f"{math.degrees(angle_elbow):.2f}°"
+        self.elbow_angle_to_reach_label.setText(angle_elbow_wanted_deg)
+        self.shoulder_angle_to_reach_angle.setText(angle_shoulder_wanted_deg)
+        self.elbow_angle_label.setText(angle_elbow_deg)
+        self.shoulder_angle_label.setText(angle_shoulder_deg)
         
         return time
         
