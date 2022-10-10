@@ -23,7 +23,9 @@ from example_interfaces.msg import Float64
 from my_arm_def_py_pkg import capture_simple_sample as css
 from my_arm_def_py_pkg import capture_EMG_sample as cem
 from time import perf_counter
+from collections import Counter
 import numpy as np
+
 
 ##########################################################################################################################
 #positions_to_use = [180.0, 90.0, 60.0, 45.0, 30.0]
@@ -37,7 +39,7 @@ old_EMG = []
 new_emg_ = []
 emg_ = None
 running = 0
-
+finish_classification = True
 
 '''
     Original by dzhu
@@ -530,10 +532,19 @@ def myo_thread():
 # Start new program here
 ########################################################################################
 
-    last_vals = None
+    #last_vals = None
     m = MyoRaw(None)
     
     def calc_quat(quat_vec):
+        """
+        This function calculate the angle of the arm with the shoulder, receiving quartenion information
+
+        Args:
+            quat_vec (list): list of four (4) values containing a quartenion regarding the position of the arm  
+
+        Returns:
+            current_pitch -> float : return the angle of the arm
+        """        
         q0, q1, q2, q3 = quat_vec
         q0 = q0 / 16384.0
         q1 = q1 / 16384.0
@@ -543,12 +554,30 @@ def myo_thread():
         return current_pitch
     
     def catch_position(quat, acc, gyro):
+        """
+        This function receive the Myo information of the imu data quaternion, acceleration and Gyro
+        then it calculate the angle of the arm and store the value in a global variable pos_braco
+
+        Args:
+            quat (list): list of quartenion of the arm position
+            acc (list):  list of the aceleration of the arm
+            gyro (list): gyro information of the arm
+        """        
         global pos_braco
         angle_pitch = calc_quat(quat)
         pos_braco = angle_pitch
 
 
     def proc_emg(emg, moving, times=[]):
+        """
+        This function receives raw EMG information and store the values if all the channel captures
+        the signals and the numper of samples is not completed
+
+        Args:
+            emg (list): receive a list with raw emg information
+            moving (list): moving information of the Myo -> not used
+            times (list, optional): _description_. Defaults to [].
+        """        
         global Emg_total
         emg_list_ = list(emg)
         if len(emg_list_) == 8 and len(Emg_total) < 50 :
@@ -556,6 +585,14 @@ def myo_thread():
 
 
     def proc_battery(battery_level):
+        """
+        This function recives the charge of the battery and set it to red
+        if the battery is less than 5%, otherwise it set it to blue
+
+        Args:
+            battery_level (int): Charge level of the battery_
+        """        
+        
         print("Battery level: %d" % battery_level)
         if battery_level < 5:
             m.set_leds([255, 0, 0], [255, 0, 0])
@@ -603,31 +640,41 @@ class CaptureBracoPositionNode(Node):
         self.antebraco_pos_publisher_ = self.create_publisher(
             Float64, "antebraco_pos_publisher", 10)
         
-        self.time_to_pub_ = self.create_timer(1.0, self.send_positions)
+        self.time_to_pub_ = self.create_timer(0.1, self.send_positions)
 
         self.get_logger().info("capture_braco_position_node has been started")
 
     #def callback_position(self, msg):
     def send_positions(self):
+        """_
+        This function create the publishers to send the angles of the arm and the upper-arm
+        """        
         braco_to_pub = Float64()
         antebraco_to_pub = Float64()
         global pos_Braco
         global Emg_total
         global emg_
         global quartenion
+        global finish_classification
         if len(Emg_total) == 50:
             if pos_braco is None:
                 pass
-            else:
-                antebraco_pos = css.main(new_data=Emg_total)
+            elif finish_classification:
+                finish_classification = False
+                antebraco_pos, finish_classification = css.main(new_data=Emg_total)                
                 Emg_total = []
                 antebraco_to_pub.data = antebraco_pos
                 braco_to_pub.data = pos_braco
-                self.get_logger().info("capture_antebraco_position is: " + str(antebraco_pos))
+                #self.get_logger().info("capture_antebraco_position is: " + str(antebraco_pos))
                 self.position_fo_the_arm_publisher_.publish(braco_to_pub)
                 self.antebraco_pos_publisher_.publish(antebraco_to_pub)
 
 def main(args=None):
+    """
+    This function create two threads,
+    one for capturing the sEMG signals (myo_thread) and the other
+    for send the positions of the arm and upper arm (ros2_thread)
+    """    
     threading.Thread(target=ros2_thread).start()
     threading.Thread(target=myo_thread).start()
 

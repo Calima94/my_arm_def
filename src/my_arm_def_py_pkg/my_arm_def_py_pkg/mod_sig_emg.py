@@ -89,6 +89,6 @@ def matrix_m(type_matrix,class_mod_, time_between_captures_of_samples, window_ti
 
 def predict_data(data_):
     from joblib import load
-    clf = load('/home/caio/my_arm_def/lda_teste.joblib')
+    clf = load('/home/caio/my_arm_def/neigh_teste.joblib')
     p = clf.predict(data_)
     return p[0]

@@ -126,4 +126,4 @@ def main(new_data):
     # Predict the category of the signal
     p = mse.predict_data(m_matrix_)
 
-    return p
+    return p, True
