@@ -46,7 +46,7 @@ if you are using a Conda environment add the following lines in the ~\.bashrc fi
 * Source again your enviroment with the comand (source ~/.bashrc)
 * run the file main.
 
-## Additional observation
+## Additional observations
 
 There are some .joblib classifiers with my EMG data, please if needed, consider Capture EMG data with the following module (Capture_EMG_Data: https://github.com/Calima94/Capture_EMG_Data.git) and training the classifier with the module (Train_Myo_Signals: https://github.com/Calima94/Train_Myo_Signals.git).
 
