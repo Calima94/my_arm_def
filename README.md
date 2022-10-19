@@ -19,20 +19,20 @@ This module is a simulator of upper-arm using ROS2 and Gazebo using capture of E
 
 if you are using a Conda environment add the following lines in the ~\.bashrc file:
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/"user"/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-   eval "$__conda_setup"
-else
-    if [ -f "/home/"user"/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/"user"/anaconda3/etc/profile.d/conda.sh"
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/home/"user"/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+       eval "$__conda_setup"
     else
-        export PATH="/home/caio/anaconda3/bin:$PATH"
+        if [ -f "/home/"user"/anaconda3/etc/profile.d/conda.sh" ]; then
+            . "/home/"user"/anaconda3/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/caio/anaconda3/bin:$PATH"
+        fi
     fi
-fi
-#unset __conda_setup
-# <<< conda initialize <<<
+    #unset __conda_setup
+    # <<< conda initialize <<<
 
 * remember to change "user" with your user name
 
