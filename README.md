@@ -9,7 +9,7 @@ This module is a simulator of upper-arm using ROS2 and Gazebo using capture of E
 * Install ROS2-Gazebo libraries (https://classic.gazebosim.org/tutorials?tut=ros2_installing&cat=connect_ros)
 * Install all other libraries in requirements.txt (Python3 packages) and requirements.yml (Conda Packages)
 * Add in the ~/.bashrc the followings commands:
-
+    
     source /opt/ros/foxy/setup.bash
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
     source ~/my_arm_def/install/setup.bash
